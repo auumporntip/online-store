@@ -101,7 +101,7 @@ public class BILL extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel8.setText("DATE : ");
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Downloads\\receipt (2).png")); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/receipt (2).png"))); // NOI18N
 
         jButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jButton1.setText("BACK");
@@ -182,7 +182,6 @@ public class BILL extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -191,7 +190,7 @@ public class BILL extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel9))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(0, 61, Short.MAX_VALUE)
+                        .addGap(0, 79, Short.MAX_VALUE)
                         .addComponent(jLabel11)))
                 .addGap(83, 83, 83))
         );

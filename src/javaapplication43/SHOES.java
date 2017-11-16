@@ -59,7 +59,6 @@ public class SHOES extends javax.swing.JFrame {
         jTextField16 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(625, 511));
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -143,9 +142,9 @@ public class SHOES extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jButton3.setText("GET");
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\shoes-63-128.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/shoes-63-128.png"))); // NOI18N
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\Soccer-Shoes-128.png")); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/Soccer-Shoes-128.png"))); // NOI18N
 
         jTextField9.setBackground(new java.awt.Color(255, 173, 173));
         jTextField9.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N

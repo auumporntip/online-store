@@ -328,28 +328,28 @@
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\acer\Documents\GitHub\online-store\src\pic\cell-10-2-120.png"/>
+              <Image iconType="3" name="/pic/cell-10-2-120.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel12">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\acer\Documents\GitHub\online-store\src\pic\Office-Elements_11-128.png"/>
+              <Image iconType="3" name="/pic/Office-Elements_11-128.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel13">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\acer\Documents\GitHub\online-store\src\pic\Toys_-_009_-_Rocket-128.png"/>
+              <Image iconType="3" name="/pic/Toys_-_009_-_Rocket-128.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel14">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\acer\Documents\GitHub\online-store\src\pic\Basketball-128.png"/>
+              <Image iconType="3" name="/pic/Basketball-128.png"/>
             </Property>
           </Properties>
         </Component>
@@ -400,28 +400,28 @@
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\acer\Documents\GitHub\online-store\src\pic\shoe-128.png"/>
+              <Image iconType="3" name="/pic/shoe-128.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\acer\Documents\GitHub\online-store\src\pic\accessory_B-128.png"/>
+              <Image iconType="3" name="/pic/accessory_B-128.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\acer\Documents\GitHub\online-store\src\pic\microwave-128.png"/>
+              <Image iconType="3" name="/pic/microwave-128.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\acer\Documents\GitHub\online-store\src\pic\cell-2-0-120.png"/>
+              <Image iconType="3" name="/pic/cell-2-0-120.png"/>
             </Property>
           </Properties>
         </Component>

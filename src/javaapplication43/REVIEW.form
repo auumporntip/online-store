@@ -140,7 +140,6 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -382,7 +381,7 @@
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\acer\Documents\GitHub\online-store\src\pic\x-04-2-128.png"/>
+                  <Image iconType="3" name="/pic/x-04-2-128.png"/>
                 </Property>
               </Properties>
             </Component>
