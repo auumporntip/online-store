@@ -58,6 +58,7 @@ public class PRODUCT extends javax.swing.JFrame {
         jButton1.setText("GET");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(625, 511));
 
         jPanel1.setBackground(new java.awt.Color(255, 173, 173));
 
@@ -103,8 +104,6 @@ public class PRODUCT extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addContainerGap())
         );
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Desktop\\ปี2\\database\\PROJECT\\classic_U-128.png")); // NOI18N
 
         jTextField1.setBackground(new java.awt.Color(255, 173, 173));
         jTextField1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
@@ -172,8 +171,6 @@ public class PRODUCT extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jButton2.setText("GET");
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Desktop\\ปี2\\database\\PROJECT\\cell-10-2-120.png")); // NOI18N
 
         jButton3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jButton3.setText("GET");
