@@ -9,6 +9,8 @@ import javaapplication43.REGISTER2;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.*;
 import model.*;
 
@@ -263,20 +265,35 @@ public class LOGIN2 extends javax.swing.JFrame {
      * @param args the command line arguments
      */
      public void nextP() {  //method ที่เอาไว้เช็ค ตัว username & password
-                    user.login(username.getText(), String.valueOf(password.getPassword()));
-                    System.out.println(user.getUsername());
-                    System.out.println(user.getPassword());
-                    if (user.getCustID() == 0) {  
-                              System.out.println("Login fail");  
-                              JOptionPane.showMessageDialog(this, "Wrong Username or Password!", "Invalid", JOptionPane.WARNING_MESSAGE);  
-                    } else {   
-                              System.out.println("Login success");  
-                              ONLINESTORE online = new ONLINESTORE();  
-                              
-                             
-                              this.dispose();  
-                              online.setVisible(true);
-                    }
+         
+            Connection con = ConnectionBuilder.getConnection();
+            PreparedStatement ps;
+        try {
+            ps = con.prepareStatement("SELECT * FROM `customer` WHERE `username`=? AND `password`=?");
+            ps.setString(1, username.getText());
+            ps.setString(2, password.getText());
+            ResultSet rs=ps.executeQuery();
+        if(rs.next())
+            // ps.setString(1, usern);
+            // ps.setString(2, pass);
+         
+//                    user.login(username.getText(), String.valueOf(password.getPassword()));
+//                    System.out.println(user.getUsername());
+//                    System.out.println(user.getPassword());
+//                    if (user.getCustID() == 0) {
+//                              System.out.println("Login fail");
+//                              JOptionPane.showMessageDialog(this, "Wrong Username or Password!", "Invalid", JOptionPane.WARNING_MESSAGE);
+//                    } else {
+//                              System.out.println("Login success");
+//                              ONLINESTORE online = new ONLINESTORE();
+//
+//
+//                              this.dispose();  
+//                              online.setVisible(true);
+//                    }
+        } catch (SQLException ex) {
+            Logger.getLogger(LOGIN2.class.getName()).log(Level.SEVERE, null, ex);
+        }
           }
 
           public void setUser() {

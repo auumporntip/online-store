@@ -5,17 +5,21 @@
  */
 package javaapplication43;
 import javaapplication43.ONLINESTORE;
+import java.sql.*;
+import javax.swing.*;
+import model.ConnectionBuilder;
 /**
  *
  * @author acer
  */
 public class SHOES extends javax.swing.JFrame {
-
+    ResultSet rs;
     /**
      * Creates new form SHOES
      */
     public SHOES() {
         initComponents();
+        showData();
     }
 
     /**
@@ -343,6 +347,20 @@ public class SHOES extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField12ActionPerformed
 
+    public void showData() {
+        String sql = "select * from product";
+                try {
+                    Connection conn = ConnectionBuilder.getConnection();
+                    Statement stm = conn.createStatement();
+                    rs=stm.executeQuery(sql);
+                    while(rs.next()){
+                        System.out.println("ชื่อโปรดัก :"+rs.getString(2));
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                    }
+        
+    }
     /**
      * @param args the command line arguments
      */
