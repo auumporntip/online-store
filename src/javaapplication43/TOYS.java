@@ -151,8 +151,6 @@ public class TOYS extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jButton3.setText("GET");
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\package_toys.png")); // NOI18N
-
         jTextField10.setBackground(new java.awt.Color(255, 173, 173));
         jTextField10.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
         jTextField10.setText("รายละเอียด :  ");
@@ -177,8 +175,6 @@ public class TOYS extends javax.swing.JFrame {
         jTextField13.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
         jTextField13.setText("รหัสสินค้า : ");
         jTextField13.setBorder(null);
-
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\Toys_-_Ultra_-_062_-_Aeroplane-128.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);

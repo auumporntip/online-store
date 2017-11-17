@@ -417,11 +417,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\acer\Documents\GitHub\online-store\src\pic\package_toys.png"/>
-                </Property>
-              </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField1">
             </Component>
@@ -499,11 +494,6 @@
             <Component class="javax.swing.JTextField" name="jTextField17">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\acer\Documents\GitHub\online-store\src\pic\Toys_-_Ultra_-_062_-_Aeroplane-128.png"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
