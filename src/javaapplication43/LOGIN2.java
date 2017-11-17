@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package javaapplication43;
+
 import javaapplication43.ONLINESTORE;
 import javaapplication43.REGISTER2;
 import java.awt.*;
@@ -14,7 +15,6 @@ import java.util.logging.Logger;
 import javax.swing.*;
 import model.*;
 
-
 public class LOGIN2 extends javax.swing.JFrame {
 
     /**
@@ -22,7 +22,7 @@ public class LOGIN2 extends javax.swing.JFrame {
      */
     public LOGIN2() {
         initComponents();
-         user.setCustID(0);
+        user.setCustID(0);
     }
 
     /**
@@ -235,20 +235,20 @@ public class LOGIN2 extends javax.swing.JFrame {
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
 
-     nextP();  
+        nextP();
     }//GEN-LAST:event_loginActionPerformed
 
     private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
-        REGISTER2 Info=new REGISTER2();   
-        this.dispose();  
-        Info.setDefaultCloseOperation(EXIT_ON_CLOSE); 
+        REGISTER2 Info = new REGISTER2();
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true); // TODO add your handling code here:
     }//GEN-LAST:event_registerActionPerformed
 
     private void usernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usernameKeyPressed
-       if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-                        nextP();  
-              }
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            nextP();
+        }
     }//GEN-LAST:event_usernameKeyPressed
 
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
@@ -256,94 +256,91 @@ public class LOGIN2 extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordActionPerformed
 
     private void passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyPressed
-       if (evt.getKeyCode() == KeyEvent.VK_ENTER) { 
-                        nextP(); 
-              }
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            nextP();
+        }
     }//GEN-LAST:event_passwordKeyPressed
 
     /**
      * @param args the command line arguments
      */
-     public void nextP() {  //method ที่เอาไว้เช็ค ตัว username & password
-         
-            Connection con = ConnectionBuilder.getConnection();
-            PreparedStatement ps;
+    public void nextP() {  //method ที่เอาไว้เช็ค ตัว username & password
+
+//        Connection con = ConnectionBuilder.getConnection();
+//        PreparedStatement ps;
+//        try {
+//            ps = con.prepareStatement("SELECT * FROM `customer` WHERE `username`=? AND `password`=?");
+//            ps.setString(1, username.getText());
+//            ps.setString(2, password.getText());
+//            ResultSet rs = ps.executeQuery();
+//            if (rs.getString(8) == 0 || rs.getString(9) == 0) {
+//                System.out.println("Login fail");
+//                JOptionPane.showMessageDialog(this, "Wrong Username or Password!", "Invalid", JOptionPane.WARNING_MESSAGE);
+//            } else {
+//                System.out.println("Login success");
+//                ONLINESTORE online = new ONLINESTORE();
+//                this.dispose();
+//                online.setVisible(true);
+//
+//            }
+//
+//            // ps.setString(1, usern);
+//            // ps.setString(2, pass);
+                
+          }
+//        } catch (SQLException ex) {
+//            Logger.getLogger(LOGIN2.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+    
+
+    public void setUser() {
         try {
-            ps = con.prepareStatement("SELECT * FROM `customer` WHERE `username`=? AND `password`=?");
-            ps.setString(1, username.getText());
-            ps.setString(2, password.getText());
-            ResultSet rs=ps.executeQuery();
-        if(rs.next())
-            // ps.setString(1, usern);
-            // ps.setString(2, pass);
-         
-//                    user.login(username.getText(), String.valueOf(password.getPassword()));
-//                    System.out.println(user.getUsername());
-//                    System.out.println(user.getPassword());
-//                    if (user.getCustID() == 0) {
-//                              System.out.println("Login fail");
-//                              JOptionPane.showMessageDialog(this, "Wrong Username or Password!", "Invalid", JOptionPane.WARNING_MESSAGE);
-//                    } else {
-//                              System.out.println("Login success");
-//                              ONLINESTORE online = new ONLINESTORE();
-//
-//
-//                              this.dispose();  
-//                              online.setVisible(true);
-//                    }
+            con = ConnectionBuilder.getConnection();
+            ps = con.prepareStatement("SELECT * FROM customer WHERE custID=?");
+            ps.setInt(1, user.getCustID());
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                User.orm(rs, user);
+            }
         } catch (SQLException ex) {
-            Logger.getLogger(LOGIN2.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println(ex);
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException ex) {
+                System.err.println(ex);
+            }
         }
-          }
+    }
 
-          public void setUser() {
-                    try {
-                              con = ConnectionBuilder.getConnection();
-                              ps = con.prepareStatement("SELECT * FROM customer WHERE custID=?");
-                              ps.setInt(1, user.getCustID());
-                              ResultSet rs = ps.executeQuery();
-                              if (rs.next()) {
-                                        User.orm(rs, user);
-                              }
-                            } catch (SQLException ex) {
-                              System.err.println(ex);
-                            } finally {
-                              try {
-                                        con.close();
-                              } catch (SQLException ex) {
-                                        System.err.println(ex);
-                              }
-                    }
-          }
+    public void setId(int us) {
+        user.setCustID(us);
+    }
 
-          public void setId(int us) {
-                    user.setCustID(us);
-          }
+    public static void main(String args[]) {
 
-          public static void main(String args[]) {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(LOGIN2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
 
-                    try {
-                              for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                                        if ("Nimbus".equals(info.getName())) {
-                                                  javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                                                  break;
-                                        }
-                              }
-                    } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-                              java.util.logging.Logger.getLogger(LOGIN2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-                    }
-
-                     java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new LOGIN2().setVisible(true);
             }
         });
     }
 
-          Connection con;
-          PreparedStatement ps;
-          User user = new User();
-         
+    Connection con;
+    PreparedStatement ps;
+    User user = new User();
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

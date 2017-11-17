@@ -8,9 +8,8 @@ import javaapplication43.PRODUCT;
 import javaapplication43.TOYS;
 import javaapplication43.SPORT;
 import javaapplication43.ACCESSORIES;
-import javaapplication43.SHOES;
+import javaapplication43.Shoes;
 // javaapplication43.ELECTRONICS;
-
 /**
  *
  * @author acer
@@ -341,7 +340,7 @@ PRODUCT Info=new PRODUCT();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        SHOES Info=new SHOES();   
+        Shoes Info=new Shoes();   
     Info.setVisible(true); // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -416,4 +415,12 @@ PRODUCT Info=new PRODUCT();
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
+
+    void setUser() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void setId(int custID) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
