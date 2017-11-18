@@ -4,18 +4,18 @@
  * and open the template in the editor.
  */
 package javaapplication43;
-import javaapplication43.ONLINESTORE;
-import javaapplication43.ORDER;
+import javaapplication43.OnlineStore;
+import javaapplication43.Order;
 /**
  *
  * @author acer
  */
-public class ELECTRONICS extends javax.swing.JFrame {
+public class Electronics extends javax.swing.JFrame {
 
     /**
      * Creates new form ELECTRONICS
      */
-    public ELECTRONICS() {
+    public Electronics() {
         initComponents();
     }
 
@@ -438,7 +438,7 @@ public class ELECTRONICS extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       ONLINESTORE Info = new ONLINESTORE();
+       OnlineStore Info = new OnlineStore();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);          // TODO add your handling code here:
@@ -449,7 +449,7 @@ public class ELECTRONICS extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        ORDER Info = new ORDER();
+        Order Info = new Order();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true); // TODO add your handling code here:
@@ -460,7 +460,7 @@ public class ELECTRONICS extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField44ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        ORDER Info = new ORDER();
+        Order Info = new Order();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);  // TODO add your handling code here:
@@ -499,20 +499,21 @@ public class ELECTRONICS extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ELECTRONICS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Electronics.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ELECTRONICS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Electronics.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ELECTRONICS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Electronics.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ELECTRONICS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Electronics.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ELECTRONICS().setVisible(true);
+                new Electronics().setVisible(true);
             }
         });
     }

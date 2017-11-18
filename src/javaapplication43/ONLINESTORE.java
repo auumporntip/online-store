@@ -4,22 +4,22 @@
  * and open the template in the editor.
  */
 package javaapplication43;
-import javaapplication43.PRODUCT;
-import javaapplication43.TOYS;
-import javaapplication43.SPORT;
-import javaapplication43.ACCESSORIES;
-import javaapplication43.SHOES;
+import javaapplication43.Product;
+import javaapplication43.Toys;
+import javaapplication43.Sport;
+import javaapplication43.Accessories;
+import javaapplication43.Shoes;
 // javaapplication43.ELECTRONICS;
 /**
  *
  * @author acer
  */
-public class ONLINESTORE extends javax.swing.JFrame {
+public class OnlineStore extends javax.swing.JFrame {
 
     /**
      * Creates new form ONLINESTORE
      */
-    public ONLINESTORE() {
+    public OnlineStore() {
         initComponents();
     }
 
@@ -289,35 +289,35 @@ public class ONLINESTORE extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-PRODUCT Info = new PRODUCT();
+Product Info = new Product();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);      // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-      SPORT Info = new SPORT();
+      Sport Info = new Sport();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);   // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        TOYS Info = new TOYS();
+        Toys Info = new Toys();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-     ACCESSORIES Info = new ACCESSORIES();
+     Accessories Info = new Accessories();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);  // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       SHOES Info = new SHOES();
+       Shoes Info = new Shoes();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true); // TODO add your handling code here:
@@ -329,7 +329,7 @@ PRODUCT Info = new PRODUCT();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-   LOGIN2 Info = new LOGIN2();
+   Login Info = new Login();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);         // TODO add your handling code here:
@@ -352,20 +352,21 @@ PRODUCT Info = new PRODUCT();
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ONLINESTORE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OnlineStore.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ONLINESTORE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OnlineStore.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ONLINESTORE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OnlineStore.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ONLINESTORE.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(OnlineStore.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ONLINESTORE().setVisible(true);
+                new OnlineStore().setVisible(true);
             }
         });
     }
