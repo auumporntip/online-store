@@ -451,7 +451,9 @@ public class PRODUCT extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        ONLINESTORE Info=new ONLINESTORE();
+        ONLINESTORE Info = new ONLINESTORE();
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);           // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -460,7 +462,9 @@ public class PRODUCT extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        ORDER Info=new ORDER();
+        ORDER Info = new ORDER();
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);  // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -469,7 +473,9 @@ public class PRODUCT extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField44ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        ORDER Info=new ORDER();
+        ORDER Info = new ORDER();
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);  // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 

@@ -452,7 +452,9 @@ public class ACCESSORIES extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ONLINESTORE Info=new ONLINESTORE();
+        ONLINESTORE Info = new ONLINESTORE();
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);           // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -473,12 +475,16 @@ public class ACCESSORIES extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField21ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      ORDER Info=new ORDER();
+      ORDER Info = new ORDER();
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);  // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-      ORDER Info=new ORDER();
+      ORDER Info = new ORDER();
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);  // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 

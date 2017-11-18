@@ -337,8 +337,10 @@ public class REGISTER2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    LOGIN2 Info=new LOGIN2();   
-    Info.setVisible(true);        // TODO add your handling code here:
+    LOGIN2 Info = new LOGIN2();
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Info.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

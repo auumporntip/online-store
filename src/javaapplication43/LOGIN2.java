@@ -241,7 +241,8 @@ public class LOGIN2 extends javax.swing.JFrame {
         REGISTER2 Info = new REGISTER2();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        Info.setVisible(true); // TODO add your handling code here:
+        Info.setVisible(true);
+        // TODO add your handling code here:
     }//GEN-LAST:event_registerActionPerformed
 
     private void usernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usernameKeyPressed
