@@ -5,8 +5,8 @@
  */
 package javaapplication43;
 
-import javaapplication43.ONLINESTORE;
-import javaapplication43.REGISTER2;
+import javaapplication43.OnlineStore;
+import javaapplication43.Register;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
@@ -15,12 +15,12 @@ import java.util.logging.Logger;
 import javax.swing.*;
 import model.*;
 
-public class LOGIN2 extends javax.swing.JFrame {
+public class Login extends javax.swing.JFrame {
 
     /**
      * Creates new form LOGIN2
      */
-    public LOGIN2() {
+    public Login() {
         initComponents();
         user.setCustID(0);
     }
@@ -238,7 +238,7 @@ public class LOGIN2 extends javax.swing.JFrame {
     }//GEN-LAST:event_loginActionPerformed
 
     private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
-        REGISTER2 Info = new REGISTER2();
+        Register Info = new Register();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);
@@ -266,33 +266,35 @@ public class LOGIN2 extends javax.swing.JFrame {
      */
     public void nextP() {  //method ที่เอาไว้เช็ค ตัว username & password
 
-//        Connection con = ConnectionBuilder.getConnection();
-//        PreparedStatement ps;
-//        try {
-//            ps = con.prepareStatement("SELECT * FROM `customer` WHERE `username`=? AND `password`=?");
-//            ps.setString(1, username.getText());
-//            ps.setString(2, password.getText());
-//            ResultSet rs = ps.executeQuery();
-//            if (rs.getString(8) == 0 || rs.getString(9) == 0) {
-//                System.out.println("Login fail");
-//                JOptionPane.showMessageDialog(this, "Wrong Username or Password!", "Invalid", JOptionPane.WARNING_MESSAGE);
-//            } else {
-//                System.out.println("Login success");
-//                ONLINESTORE online = new ONLINESTORE();
-//                this.dispose();
-//                online.setVisible(true);
-//
-//            }
-//
-//            // ps.setString(1, usern);
-//            // ps.setString(2, pass);
-                
-          }
-//        } catch (SQLException ex) {
-//            Logger.getLogger(LOGIN2.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-    
 
+
+        Connection con = ConnectionBuilder.getConnection();
+        PreparedStatement ps;
+        try {
+            ps = con.prepareStatement("SELECT * FROM `customer` WHERE `username`=? AND `password`=?");
+            ps.setString(1, username.getText());
+            ps.setString(2, password.getText());
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            if (rs.getString(8) == null || rs.getString(9) == null) {
+                System.out.println("Login fail");
+                JOptionPane.showMessageDialog(this, "Wrong Username or Password!", "Invalid", JOptionPane.WARNING_MESSAGE);
+            } else {
+                System.out.println("Login success");
+                OnlineStore online = new OnlineStore();
+                this.dispose();
+                online.setVisible(true);
+
+            }
+          
+        } catch (SQLException ex) {
+           System.out.println("Login fail");
+                JOptionPane.showMessageDialog(this, "Wrong Username or Password!", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
+
+
+    
+    }
     public void setUser() {
         try {
             con = ConnectionBuilder.getConnection();
@@ -327,12 +329,12 @@ public class LOGIN2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LOGIN2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LOGIN2().setVisible(true);
+                new Login().setVisible(true);
             }
         });
     }

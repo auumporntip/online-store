@@ -77,7 +77,7 @@ public class User {
         this.password = password;
     }
 
-    public void register(String fName, String lName, String gender, String birthday, String phone, String email, String username, String password) throws SQLException {
+    public void register(String fName, String lName ,String gender,String birthdate, String phone, String email, String username, String password) throws SQLException {
         try (Connection con = ConnectionBuilder.getConnection()) {
             PreparedStatement regis
                     = con.prepareStatement("INSERT INTO `customer` (`custID`, `fName`, `lName`, `gender`, `birthdate`, `phone`, `email`, `username`, `password`) "
@@ -85,7 +85,7 @@ public class User {
             regis.setString(1, fName);
             regis.setString(2, lName);
             regis.setString(3, gender);
-            regis.setString(4, birthday);
+            regis.setString(4, birthdate);
             regis.setString(5, phone);
             regis.setString(6, email);
             regis.setString(7, username);
@@ -198,4 +198,5 @@ public class User {
 //                + "\nRole : " + role + " Position : " + position;
 //    }
 
+   
 }
