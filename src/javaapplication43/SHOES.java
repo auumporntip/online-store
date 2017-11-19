@@ -57,7 +57,6 @@ public class Shoes extends javax.swing.JFrame {
         jTextField8 = new javax.swing.JTextField();
         jTextField44 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
         prodID = new javax.swing.JTextField();
         prodname = new javax.swing.JTextField();
         promotion = new javax.swing.JTextField();
@@ -191,8 +190,6 @@ public class Shoes extends javax.swing.JFrame {
             }
         });
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/shoes-63-128.png"))); // NOI18N
-
         prodID.setBackground(new java.awt.Color(255, 204, 204));
 
         prodname.setBackground(new java.awt.Color(255, 204, 204));
@@ -283,9 +280,6 @@ public class Shoes extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(description, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(120, 120, 120)
-                                .addComponent(jLabel14))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(138, 138, 138)
                                 .addComponent(jLabel3)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
@@ -367,11 +361,8 @@ public class Shoes extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addComponent(jLabel14))
-                            .addComponent(jLabel15))
+                        .addComponent(jLabel15)
+                        .addGap(11, 11, 11)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(1, 1, 1)
@@ -602,7 +593,6 @@ public class Shoes extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
