@@ -6,6 +6,7 @@
 package javaapplication43;
 import javaapplication43.Bill;
 import javaapplication43.OnlineStore;
+import model.Function;
 /**
  *
  * @author acer
@@ -38,6 +39,11 @@ public class ORDER extends javax.swing.JFrame {
         jToggleButton1 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
@@ -170,6 +176,13 @@ public class ORDER extends javax.swing.JFrame {
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);            // TODO add your handling code here:
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        // TODO add your handling code here:
+        
+        Function func = new Function();
+        func.showOrderTable(jTable1);
+    }//GEN-LAST:event_formComponentShown
 
     /**
      * @param args the command line arguments

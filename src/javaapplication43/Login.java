@@ -285,7 +285,11 @@ public class Login extends javax.swing.JFrame {
                 OnlineStore online = new OnlineStore();
                 this.dispose();
                 online.setVisible(true);
-
+                
+                //SET USERNAME LOGIN
+                Function func = new Function();
+                func.setLoginUsername(username.getText());
+                //
             }
           
         } catch (SQLException ex) {
