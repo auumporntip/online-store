@@ -26,7 +26,28 @@ public class Function {
     public static void setLoginUsername(String loginUsername) {
         Function.loginUsername = loginUsername;
     }
-    
+    public int getLastBillId(){
+        int countBill=0;
+        
+        try {
+            Connection conn = ConnectionBuilder.getConnection();
+            String sqlCmd = "select * from bill";
+            PreparedStatement pstm = conn.prepareStatement(sqlCmd);
+            pstm.setString(1, loginUsername);
+            ResultSet rs = pstm.executeQuery();
+      
+            while (rs.next()) {
+                countBill++;
+            }
+
+            conn.close();
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        
+        return countBill;
+    }
     public int getCustId(){
         int cid=0;
         
@@ -73,18 +94,18 @@ public class Function {
         return cid;
     }
     
-    public static void addOrder(int pid, int cid, int qid) {
+    public static void addOrder(int pid, int billid,int qid) {
         boolean status = false;
         try {
             Connection conn = ConnectionBuilder.getConnection();
             String sql = "INSERT INTO order_product "
-                    +"(prodID,custID,quantity)" 
+                    +"(prodID,quantity,billid)" 
                     + "VALUES (?,?,?) ";
             
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, pid);
-            pstm.setInt(2, cid);
-            pstm.setInt(3, qid);
+            pstm.setInt(2, qid);
+            pstm.setInt(3, (billid+1));
             
             int rs = pstm.executeUpdate();
             System.out.println("ADD ORDER SUCCESS");

@@ -372,7 +372,7 @@ ResultSet rs;
         Object o = jspinner1.getValue();
         Number n = (Number) o;
         int quantity = n.intValue();
-        func.addOrder(pid,func.getCustId(),quantity);
+        func.addOrder(pid,func.getLastBillId(),quantity);
         //------------------------------------------//
         
         ORDER Info = new ORDER();
@@ -403,7 +403,7 @@ ResultSet rs;
         Object o = jspinner2.getValue();
         Number n = (Number) o;
         int quantity = n.intValue();
-        func.addOrder(pid,func.getCustId(),quantity);
+        func.addOrder(pid,func.getLastBillId(),quantity);
         //------------------------------------------//
         
         ORDER Info = new ORDER();
