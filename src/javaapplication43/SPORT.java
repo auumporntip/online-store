@@ -229,12 +229,15 @@ public class SPORT extends javax.swing.JFrame {
         jPanel5.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 180, -1));
 
         prodname2.setBackground(new java.awt.Color(255, 204, 204));
+        prodname2.setEnabled(false);
         jPanel5.add(prodname2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 180, -1));
 
         prodID2.setBackground(new java.awt.Color(255, 204, 204));
+        prodID2.setEnabled(false);
         jPanel5.add(prodID2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, 180, -1));
 
         price2.setBackground(new java.awt.Color(255, 204, 204));
+        price2.setEnabled(false);
         jPanel5.add(price2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 180, -1));
         jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(679, 41, -1, -1));
 
@@ -250,6 +253,7 @@ public class SPORT extends javax.swing.JFrame {
         jPanel5.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, -1, -1));
 
         promotion2.setBackground(new java.awt.Color(255, 204, 204));
+        promotion2.setEnabled(false);
         jPanel5.add(promotion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, 180, -1));
         jPanel5.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 410, 43, 31));
 
@@ -267,6 +271,7 @@ public class SPORT extends javax.swing.JFrame {
         description2.setColumns(20);
         description2.setLineWrap(true);
         description2.setRows(5);
+        description2.setEnabled(false);
         jScrollPane2.setViewportView(description2);
 
         jPanel5.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 270, 180, -1));

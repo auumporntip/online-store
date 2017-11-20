@@ -225,12 +225,15 @@ ResultSet rs;
         jPanel3.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 180, -1));
 
         prodname2.setBackground(new java.awt.Color(255, 204, 204));
+        prodname2.setEnabled(false);
         jPanel3.add(prodname2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 180, -1));
 
         prodID2.setBackground(new java.awt.Color(255, 204, 204));
+        prodID2.setEnabled(false);
         jPanel3.add(prodID2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 180, 180, -1));
 
         price2.setBackground(new java.awt.Color(255, 204, 204));
+        price2.setEnabled(false);
         jPanel3.add(price2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 180, -1));
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(679, 41, -1, -1));
 
@@ -246,6 +249,7 @@ ResultSet rs;
         jPanel3.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, -1, -1));
 
         promotion2.setBackground(new java.awt.Color(255, 204, 204));
+        promotion2.setEnabled(false);
         jPanel3.add(promotion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, 180, -1));
         jPanel3.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 410, 43, 31));
 
@@ -263,6 +267,7 @@ ResultSet rs;
         description2.setColumns(20);
         description2.setLineWrap(true);
         description2.setRows(5);
+        description2.setEnabled(false);
         jScrollPane2.setViewportView(description2);
 
         jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 270, 180, -1));
