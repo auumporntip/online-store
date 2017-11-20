@@ -4,12 +4,15 @@
  * and open the template in the editor.
  */
 package javaapplication43;
-import javaapplication43.Shirts;
-import javaapplication43.Toys;
-import javaapplication43.Sport;
-import javaapplication43.Accessories;
+import javaapplication43.OnlineStore;
+import javaapplication43.SPORT;
 import javaapplication43.Shoes;
-// javaapplication43.ELECTRONICS;
+import javaapplication43.TOYS;
+import javaapplication43.ELECTRONICS;
+import javaapplication43.ACCESSORIES;
+import javaapplication43.Shirts;
+import model.*;
+import javax.swing.*;
 /**
  *
  * @author acer
@@ -154,7 +157,7 @@ public class OnlineStore extends javax.swing.JFrame {
         });
 
         jButton6.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jButton6.setText("WATCH");
+        jButton6.setText("ACCESSORIES");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -169,9 +172,9 @@ public class OnlineStore extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/shoe-128.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/shoes-63-128.png"))); // NOI18N
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/wristwatch-of-circular-shape.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/accessory_B-128.png"))); // NOI18N
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/microwave-128.png"))); // NOI18N
 
@@ -294,21 +297,21 @@ Shirts Info = new Shirts();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-      Sport Info = new Sport();
+      SPORT Info = new SPORT();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);   // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Toys Info = new Toys();
+        TOYS Info = new TOYS();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-     Accessories Info = new Accessories();
+     ACCESSORIES Info = new ACCESSORIES();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);  // TODO add your handling code here:

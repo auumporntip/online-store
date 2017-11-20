@@ -80,8 +80,8 @@ public class User {
     public void register(String fName, String lName ,String gender,String birthdate, String phone, String email, String username, String password) throws SQLException {
         try (Connection con = ConnectionBuilder.getConnection()) {
             PreparedStatement regis
-                    = con.prepareStatement("INSERT INTO `customer` (`custID`, `fName`, `lName`, `gender`, `birthdate`, `phone`, `email`, `username`, `password`) "
-                            + "VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?);");
+                    = con.prepareStatement("INSERT INTO `customer` ( `fName`, `lName`, `gender`, `birthdate`, `phone`, `email`, `username`, `password`) "
+                            + "VALUES ( ?, ?, ?, ?, ?, ?, ?, ?);");
             regis.setString(1, fName);
             regis.setString(2, lName);
             regis.setString(3, gender);
@@ -187,16 +187,6 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    
-
-//    @Override
-//    public String toString() {
-//        return "Username : " + user + " Password : " + password
-//                + "\nFirstName : " + firstName + " LastName : " + lastName
-//                + "\nMobile : " + mobile
-//                + "\nRole : " + role + " Position : " + position;
-//    }
 
    
 }
