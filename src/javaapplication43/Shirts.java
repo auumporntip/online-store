@@ -92,6 +92,7 @@ ResultSet rs;
         jTextField24.setBackground(new java.awt.Color(255, 204, 204));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel3.setBackground(new java.awt.Color(153, 153, 153));
         jPanel3.setPreferredSize(new java.awt.Dimension(189, 76));
