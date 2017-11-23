@@ -237,7 +237,7 @@
                       <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="rePassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="49" max="32767" attributes="0"/>
+                  <EmptySpace pref="37" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="register" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="reset" alignment="3" min="-2" max="-2" attributes="0"/>

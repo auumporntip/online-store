@@ -75,11 +75,13 @@ ResultSet rs;
         jspinner2 = new javax.swing.JSpinner();
         jLabel10 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setPreferredSize(new java.awt.Dimension(786, 585));
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -114,11 +116,12 @@ ResultSet rs;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1))
+                .addComponent(jLabel1)
+                .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(636, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,7 +174,7 @@ ResultSet rs;
 
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel5.setText("HERMES");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, -1, -1));
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, -1, -1));
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 505, -1, -1));
 
         jTextField5.setBackground(new java.awt.Color(255, 173, 173));
@@ -237,7 +240,7 @@ ResultSet rs;
         price2.setEnabled(false);
         jPanel3.add(price2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 180, -1));
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(679, 41, -1, -1));
-        jPanel3.add(jspinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 43, 31));
+        jPanel3.add(jspinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 43, 31));
 
         jTextField23.setBackground(new java.awt.Color(255, 173, 173));
         jTextField23.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
@@ -288,14 +291,14 @@ ResultSet rs;
             }
         });
         jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 430, -1, -1));
-        jPanel3.add(jspinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 43, 31));
+        jPanel3.add(jspinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, 43, 31));
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, -1, -1));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/11.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\11.png")); // NOI18N
         jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, -1, -1));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\999.png")); // NOI18N
-        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, -1, -1));
+        jLabel11.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\999.png")); // NOI18N
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, -1, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -305,18 +308,17 @@ ResultSet rs;
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 787, Short.MAX_VALUE))
-                .addGap(0, 104, Short.MAX_VALUE))
+                .addGap(0, 3, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(312, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 505, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -482,7 +484,7 @@ ResultSet rs;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

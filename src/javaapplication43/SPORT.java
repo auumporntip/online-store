@@ -46,37 +46,33 @@ public class SPORT extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jTextField10 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
         prodID = new javax.swing.JTextField();
         prodname = new javax.swing.JTextField();
         price = new javax.swing.JTextField();
         prodname2 = new javax.swing.JTextField();
         prodID2 = new javax.swing.JTextField();
         price2 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
         jSpinner2 = new javax.swing.JSpinner();
         jTextField23 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         description2 = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         description = new javax.swing.JTextArea();
-        jLabel11 = new javax.swing.JLabel();
         jTextField24 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
         jSpinner1 = new javax.swing.JSpinner();
-        jLabel12 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -115,7 +111,8 @@ public class SPORT extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7))
+                .addComponent(jLabel7)
+                .addContainerGap())
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jLabel8)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -138,7 +135,6 @@ public class SPORT extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setText("BASKETBALL");
         jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 9, -1, -1));
-        jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 86, -1, -1));
 
         jTextField2.setBackground(new java.awt.Color(255, 173, 173));
         jTextField2.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
@@ -172,7 +168,6 @@ public class SPORT extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel5.setText("BASEBALL");
         jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, -1, -1));
-        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 505, -1, -1));
 
         jTextField5.setBackground(new java.awt.Color(255, 173, 173));
         jTextField5.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
@@ -211,7 +206,6 @@ public class SPORT extends javax.swing.JFrame {
             }
         });
         jPanel5.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, -1, -1));
-        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 41, -1, -1));
 
         prodID.setBackground(new java.awt.Color(255, 204, 204));
         prodID.setEnabled(false);
@@ -236,7 +230,6 @@ public class SPORT extends javax.swing.JFrame {
         price2.setBackground(new java.awt.Color(255, 204, 204));
         price2.setEnabled(false);
         jPanel5.add(price2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 180, -1));
-        jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(679, 41, -1, -1));
         jPanel5.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 43, 31));
 
         jTextField23.setBackground(new java.awt.Color(255, 173, 173));
@@ -268,9 +261,6 @@ public class SPORT extends javax.swing.JFrame {
 
         jPanel5.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 180, -1));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\777.png")); // NOI18N
-        jPanel5.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, -1, -1));
-
         jTextField24.setBackground(new java.awt.Color(255, 173, 173));
         jTextField24.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
         jTextField24.setText("จำนวน:");
@@ -292,8 +282,11 @@ public class SPORT extends javax.swing.JFrame {
         jPanel5.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, -1, -1));
         jPanel5.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 43, 31));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\888.png")); // NOI18N
-        jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\777.png")); // NOI18N
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\888.png")); // NOI18N
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, -1, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -307,7 +300,7 @@ public class SPORT extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 503, Short.MAX_VALUE))
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -458,16 +451,12 @@ public class SPORT extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;

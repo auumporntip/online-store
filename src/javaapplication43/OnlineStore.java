@@ -42,21 +42,17 @@ public class OnlineStore extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -118,6 +114,8 @@ public class OnlineStore extends javax.swing.JFrame {
         );
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setPreferredSize(new java.awt.Dimension(786, 585));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jButton1.setText("SHIRT");
@@ -126,6 +124,7 @@ public class OnlineStore extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
 
         jButton3.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jButton3.setText("TOYS");
@@ -134,6 +133,7 @@ public class OnlineStore extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, -1, -1));
 
         jButton4.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jButton4.setText("SPORTS");
@@ -142,12 +142,7 @@ public class OnlineStore extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-
-        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\123.png")); // NOI18N
-
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\puzzle.png")); // NOI18N
-
-        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\basketball.png")); // NOI18N
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, -1, -1));
 
         jButton7.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jButton7.setText("ELECTRONICS");
@@ -156,6 +151,7 @@ public class OnlineStore extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, -1, -1));
 
         jButton6.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jButton6.setText("ACCESSORIES");
@@ -164,6 +160,7 @@ public class OnlineStore extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, -1, -1));
 
         jButton5.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jButton5.setText("SHOES");
@@ -172,114 +169,25 @@ public class OnlineStore extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/shoes-63-128.png"))); // NOI18N
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\sunglasses.png")); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\123.png")); // NOI18N
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\444.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\puzzle.png")); // NOI18N
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, -1, -1));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(35, 35, 35)
-                                        .addComponent(jLabel3)))
-                                .addGap(323, 323, 323)
-                                .addComponent(jLabel5)
-                                .addGap(0, 174, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                        .addGap(35, 35, 35)
-                                        .addComponent(jLabel7))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                        .addGap(39, 39, 39)
-                                        .addComponent(jLabel11)
-                                        .addGap(122, 122, 122)
-                                        .addComponent(jLabel13)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3)
-                        .addGap(159, 159, 159)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addGap(163, 163, 163))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton6)
-                    .addComponent(jLabel8))
-                .addGap(107, 107, 107)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel9)
-                        .addComponent(jButton7))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(jLabel14)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButton1)
-                                    .addComponent(jButton3)
-                                    .addComponent(jButton4))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel11)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel13)
-                                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addComponent(jLabel14)))
-                                        .addGap(65, 65, 65)
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                .addComponent(jButton5)
-                                                .addComponent(jButton7))))))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(53, 53, 53)
-                                .addComponent(jLabel6)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel7))
-                        .addGap(26, 26, 26))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(15, 15, 15)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addContainerGap(54, Short.MAX_VALUE))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\basketball.png")); // NOI18N
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 100, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\sunglasses.png")); // NOI18N
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\444.png")); // NOI18N
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -394,17 +302,13 @@ Shirts Info = new Shirts();
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;

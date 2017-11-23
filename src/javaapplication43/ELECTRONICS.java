@@ -34,11 +34,6 @@ ResultSet rs;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -67,64 +62,19 @@ ResultSet rs;
         description2 = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         description = new javax.swing.JTextArea();
-        jLabel8 = new javax.swing.JLabel();
         jTextField24 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jSpinner1 = new javax.swing.JSpinner();
-        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
-
-        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel2.setPreferredSize(new java.awt.Dimension(189, 76));
-
-        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jLabel1.setText("ONLINE STORE");
-
-        jButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jButton1.setText("BACK");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
-        jLabel2.setText("ELECTRONICS");
-
-        jButton2.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jButton2.setText("ORDER");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addComponent(jLabel2))
-        );
 
         jPanel3.setBackground(new java.awt.Color(255, 173, 173));
         jPanel3.setPreferredSize(new java.awt.Dimension(625, 511));
@@ -132,7 +82,7 @@ ResultSet rs;
 
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel3.setText("LAPTOP");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 9, -1, -1));
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, -1, -1));
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 86, -1, -1));
 
         jTextField2.setBackground(new java.awt.Color(255, 173, 173));
@@ -166,7 +116,7 @@ ResultSet rs;
 
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel5.setText("MICROWAVE");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, -1, -1));
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, -1, -1));
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 505, -1, -1));
 
         jTextField5.setBackground(new java.awt.Color(255, 173, 173));
@@ -205,7 +155,7 @@ ResultSet rs;
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 420, -1, -1));
+        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, -1, -1));
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 41, -1, -1));
 
         prodID.setBackground(new java.awt.Color(255, 204, 204));
@@ -232,7 +182,7 @@ ResultSet rs;
         price2.setEnabled(false);
         jPanel3.add(price2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 180, -1));
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(679, 41, -1, -1));
-        jPanel3.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 43, 31));
+        jPanel3.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 43, 31));
 
         jTextField23.setBackground(new java.awt.Color(255, 173, 173));
         jTextField23.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
@@ -243,7 +193,7 @@ ResultSet rs;
                 jTextField23ActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, -1, -1));
+        jPanel3.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, -1, -1));
 
         description2.setColumns(20);
         description2.setLineWrap(true);
@@ -263,9 +213,6 @@ ResultSet rs;
 
         jPanel3.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 180, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\13.png")); // NOI18N
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, -1, -1));
-
         jTextField24.setBackground(new java.awt.Color(255, 173, 173));
         jTextField24.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
         jTextField24.setText("จำนวน:");
@@ -275,7 +222,7 @@ ResultSet rs;
                 jTextField24ActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField24, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, -1, -1));
+        jPanel3.add(jTextField24, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
 
         jButton4.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jButton4.setText("GET");
@@ -284,18 +231,72 @@ ResultSet rs;
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 420, -1, -1));
-        jPanel3.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 43, 31));
+        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 430, -1, -1));
+        jPanel3.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, 43, 31));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\16.png")); // NOI18N
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, -1, -1));
+        jLabel11.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\13.png")); // NOI18N
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, -1, -1));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\16.png")); // NOI18N
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setPreferredSize(new java.awt.Dimension(189, 76));
+
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel1.setText("ONLINE STORE");
+
+        jButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jButton1.setText("BACK");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
+        jLabel2.setText("ELECTRONICS");
+
+        jButton2.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jButton2.setText("ORDER");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addComponent(jLabel2))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 786, Short.MAX_VALUE)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 786, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 786, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -451,7 +452,7 @@ ResultSet rs;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
