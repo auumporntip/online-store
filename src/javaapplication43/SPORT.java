@@ -66,8 +66,6 @@ public class SPORT extends javax.swing.JFrame {
         prodID2 = new javax.swing.JTextField();
         price2 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
-        promotion2 = new javax.swing.JTextField();
         jSpinner2 = new javax.swing.JSpinner();
         jTextField23 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -75,8 +73,6 @@ public class SPORT extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         description = new javax.swing.JTextArea();
         jLabel11 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
-        promotion = new javax.swing.JTextField();
         jTextField24 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
         jSpinner1 = new javax.swing.JSpinner();
@@ -214,7 +210,7 @@ public class SPORT extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, -1, -1));
+        jPanel5.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, -1, -1));
         jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 41, -1, -1));
 
         prodID.setBackground(new java.awt.Color(255, 204, 204));
@@ -241,22 +237,7 @@ public class SPORT extends javax.swing.JFrame {
         price2.setEnabled(false);
         jPanel5.add(price2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 180, -1));
         jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(679, 41, -1, -1));
-
-        jTextField17.setBackground(new java.awt.Color(255, 173, 173));
-        jTextField17.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
-        jTextField17.setText("PROMOTION:");
-        jTextField17.setBorder(null);
-        jTextField17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField17ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, -1, -1));
-
-        promotion2.setBackground(new java.awt.Color(255, 204, 204));
-        promotion2.setEnabled(false);
-        jPanel5.add(promotion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, 180, -1));
-        jPanel5.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 410, 43, 31));
+        jPanel5.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 43, 31));
 
         jTextField23.setBackground(new java.awt.Color(255, 173, 173));
         jTextField23.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
@@ -267,7 +248,7 @@ public class SPORT extends javax.swing.JFrame {
                 jTextField23ActionPerformed(evt);
             }
         });
-        jPanel5.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, -1, -1));
+        jPanel5.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, -1, -1));
 
         description2.setColumns(20);
         description2.setLineWrap(true);
@@ -290,20 +271,6 @@ public class SPORT extends javax.swing.JFrame {
         jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\777.png")); // NOI18N
         jPanel5.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, -1, -1));
 
-        jTextField18.setBackground(new java.awt.Color(255, 173, 173));
-        jTextField18.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
-        jTextField18.setText("PROMOTION:");
-        jTextField18.setBorder(null);
-        jTextField18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField18ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, -1, -1));
-
-        promotion.setEnabled(false);
-        jPanel5.add(promotion, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 180, -1));
-
         jTextField24.setBackground(new java.awt.Color(255, 173, 173));
         jTextField24.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
         jTextField24.setText("จำนวน:");
@@ -313,7 +280,7 @@ public class SPORT extends javax.swing.JFrame {
                 jTextField24ActionPerformed(evt);
             }
         });
-        jPanel5.add(jTextField24, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, -1, -1));
+        jPanel5.add(jTextField24, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, -1, -1));
 
         jButton5.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jButton5.setText("GET");
@@ -322,8 +289,8 @@ public class SPORT extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 450, -1, -1));
-        jPanel5.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, 43, 31));
+        jPanel5.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, -1, -1));
+        jPanel5.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 43, 31));
 
         jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\acer\\Documents\\GitHub\\online-store\\src\\pic\\888.png")); // NOI18N
         jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, -1, -1));
@@ -379,17 +346,9 @@ public class SPORT extends javax.swing.JFrame {
         Info.setVisible(true);  // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
-
     private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField23ActionPerformed
-
-    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField18ActionPerformed
 
     private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
         // TODO add your handling code here:
@@ -432,7 +391,7 @@ public class SPORT extends javax.swing.JFrame {
             prodname.setText(rs.getString(2));
             price.setText(rs.getString(4));
             description.setText(rs.getString(3));
-            promotion.setText(rs.getString(5));
+            
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -444,7 +403,7 @@ public class SPORT extends javax.swing.JFrame {
             prodname2.setText(rs.getString(2));
             price2.setText(rs.getString(4));
             description2.setText(rs.getString(3));
-            promotion2.setText(rs.getString(5));
+           
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -517,8 +476,6 @@ public class SPORT extends javax.swing.JFrame {
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
@@ -534,7 +491,5 @@ public class SPORT extends javax.swing.JFrame {
     private javax.swing.JTextField prodID2;
     private javax.swing.JTextField prodname;
     private javax.swing.JTextField prodname2;
-    private javax.swing.JTextField promotion;
-    private javax.swing.JTextField promotion2;
     // End of variables declaration//GEN-END:variables
 }
