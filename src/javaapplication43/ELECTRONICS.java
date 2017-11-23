@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import javaapplication43.OnlineStore;
 import javaapplication43.ORDER;
 import model.ConnectionBuilder;
+import model.Function;
 /**
  *
  * @author acer
@@ -20,9 +21,15 @@ ResultSet rs;
     /**
      * Creates new form ELECTRONICS
      */
+private String username="";
     public ELECTRONICS() {
         initComponents();
         showData();
+    }
+     public ELECTRONICS(String user) {
+        initComponents();
+        showData();
+        username = user;
     }
 
     /**
@@ -56,7 +63,7 @@ ResultSet rs;
         prodID2 = new javax.swing.JTextField();
         price2 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jSpinner2 = new javax.swing.JSpinner();
+        jspinner1 = new javax.swing.JSpinner();
         jTextField23 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         description2 = new javax.swing.JTextArea();
@@ -64,7 +71,7 @@ ResultSet rs;
         description = new javax.swing.JTextArea();
         jTextField24 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
-        jSpinner1 = new javax.swing.JSpinner();
+        jspinner2 = new javax.swing.JSpinner();
         jLabel11 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -182,7 +189,7 @@ ResultSet rs;
         price2.setEnabled(false);
         jPanel3.add(price2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 180, -1));
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(679, 41, -1, -1));
-        jPanel3.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 43, 31));
+        jPanel3.add(jspinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 43, 31));
 
         jTextField23.setBackground(new java.awt.Color(255, 173, 173));
         jTextField23.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
@@ -232,7 +239,7 @@ ResultSet rs;
             }
         });
         jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 430, -1, -1));
-        jPanel3.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, 43, 31));
+        jPanel3.add(jspinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, 43, 31));
 
         jLabel11.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\13.png")); // NOI18N
         jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, -1, -1));
@@ -310,7 +317,7 @@ ResultSet rs;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       OnlineStore Info = new OnlineStore();
+       OnlineStore Info = new OnlineStore(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);          // TODO add your handling code here:
@@ -325,7 +332,18 @@ ResultSet rs;
     }//GEN-LAST:event_jTextField10ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        ORDER Info = new ORDER();
+  Function func = new Function();
+        int pid = Integer.parseInt(prodID.getText());
+        Object o = jspinner1.getValue();
+        Number n = (Number) o;
+        int quantity = n.intValue();
+        
+        double p = Double.parseDouble(price.getText());
+        func.addOrderDetail(pid,p,func.getLastOrderId(),quantity);
+        
+        //------------------------------------------//        
+        
+        ORDER Info = new ORDER(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);  // TODO add your handling code here:
@@ -340,11 +358,23 @@ ResultSet rs;
     }//GEN-LAST:event_jTextField24ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        Function func = new Function();
+        int pid = Integer.parseInt(prodID2.getText());
+        Object o = jspinner2.getValue();
+        Number n = (Number) o;
+        int quantity = n.intValue();
+        double p = Double.parseDouble(price2.getText());
+        func.addOrderDetail(pid, p, func.getLastOrderId(), quantity);
+        //------------------------------------------//
+        ORDER Info = new ORDER(username);
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Info.setVisible(true); 
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
- ORDER Info = new ORDER();
+ ORDER Info = new ORDER(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);        // TODO add your handling code here:
@@ -465,8 +495,6 @@ ResultSet rs;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField23;
@@ -477,6 +505,8 @@ ResultSet rs;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JSpinner jspinner1;
+    private javax.swing.JSpinner jspinner2;
     private javax.swing.JTextField price;
     private javax.swing.JTextField price2;
     private javax.swing.JTextField prodID;

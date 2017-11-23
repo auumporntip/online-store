@@ -20,11 +20,16 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form LOGIN2
      */
+    private String username1 = "";
     public Login() {
         initComponents();
         user.setCustID(0);
     }
-
+ public Login(String us) {
+        initComponents();
+        user.setCustID(0);
+        username1 = us;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -239,7 +244,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_loginActionPerformed
 
     private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
-        Register Info = new Register();
+        Register Info = new Register(username1);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);
@@ -282,14 +287,13 @@ public class Login extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Wrong Username or Password!", "Invalid", JOptionPane.WARNING_MESSAGE);
             } else {
                 System.out.println("Login success");
-                OnlineStore online = new OnlineStore();
+                OnlineStore online = new OnlineStore(username.getText());
                 this.dispose();
                 online.setVisible(true);
-                
-                //SET USERNAME LOGIN
                 Function func = new Function();
-                func.setLoginUsername(username.getText());
-                //
+                func.addOrder(func.getCustId(username.getText()));
+                
+
             }
           
         } catch (SQLException ex) {

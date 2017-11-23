@@ -22,8 +22,13 @@ public class OnlineStore extends javax.swing.JFrame {
     /**
      * Creates new form ONLINESTORE
      */
+    private String username="";
     public OnlineStore() {
         initComponents();
+    }
+    public OnlineStore(String user) {
+        initComponents();
+        username = user;
     }
 
     /**
@@ -40,6 +45,7 @@ public class OnlineStore extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton8 = new javax.swing.JButton();
+        order = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -78,10 +84,19 @@ public class OnlineStore extends javax.swing.JFrame {
             .addGap(0, 95, Short.MAX_VALUE)
         );
 
+        jButton8.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jButton8.setText("BACK");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
+            }
+        });
+
+        order.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        order.setText("ORDER ");
+        order.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                orderActionPerformed(evt);
             }
         });
 
@@ -91,6 +106,8 @@ public class OnlineStore extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addComponent(jButton8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(order)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addContainerGap())
@@ -105,7 +122,9 @@ public class OnlineStore extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1)
-                    .addComponent(jButton8))
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton8)
+                        .addComponent(order)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -208,42 +227,42 @@ public class OnlineStore extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-Shirts Info = new Shirts();
+Shirts Info = new Shirts(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);      // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-      SPORT Info = new SPORT();
+      SPORT Info = new SPORT(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);   // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        TOYS Info = new TOYS();
+        TOYS Info = new TOYS(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-     ACCESSORIES Info = new ACCESSORIES();
+     ACCESSORIES Info = new ACCESSORIES(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);  // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       Shoes Info = new Shoes();
+       Shoes Info = new Shoes(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true); // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-     ELECTRONICS Info = new ELECTRONICS();
+     ELECTRONICS Info = new ELECTRONICS(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);    //ELECTRONICS Info=new ELECTRONICS();   
@@ -251,11 +270,18 @@ Shirts Info = new Shirts();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-   Login Info = new Login();
+         Login Info = new Login(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void orderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderActionPerformed
+        ORDER Info = new ORDER(username);
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Info.setVisible(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_orderActionPerformed
 
     /**
      * @param args the command line arguments
@@ -312,6 +338,7 @@ Shirts Info = new Shirts();
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JButton order;
     // End of variables declaration//GEN-END:variables
 
     void setUser() {

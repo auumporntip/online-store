@@ -4,25 +4,35 @@
  * and open the template in the editor.
  */
 package javaapplication43;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javaapplication43.OnlineStore;
-import javaapplication43.ORDER;
+
 import model.ConnectionBuilder;
 import model.Function;
+
 /**
  *
  * @author acer
  */
 public class ACCESSORIES extends javax.swing.JFrame {
-ResultSet rs;
+
+    ResultSet rs;
+    private String username = "";
+
     /**
      * Creates new form ACCESSORIES
      */
     public ACCESSORIES() {
         initComponents();
+        showData();
+    }
+
+    public ACCESSORIES(String user) {
+        initComponents();
+        username = user;
         showData();
     }
 
@@ -99,7 +109,7 @@ ResultSet rs;
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel2.setText("ACCESSORIES");
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jButton2.setText("ORDER");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -324,7 +334,7 @@ ResultSet rs;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        OnlineStore Info = new OnlineStore();
+        OnlineStore Info = new OnlineStore(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);           // TODO add your handling code here:
@@ -340,20 +350,23 @@ ResultSet rs;
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         //----------ADD ORDER TO DATABASE----------//
+
         Function func = new Function();
         int pid = Integer.parseInt(prodID.getText());
         Object o = jspinner1.getValue();
         Number n = (Number) o;
         int quantity = n.intValue();
-        func.addOrder(pid,func.getLastBillId(),quantity);
+
+        double p = Double.parseDouble(price.getText());
+        func.addOrderDetail(pid, p, func.getLastOrderId(), quantity);
+
         //------------------------------------------//
-        
-        ORDER Info = new ORDER();
+        ORDER Info = new ORDER(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);  // TODO add your handling code here:
-        
-    
+
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
@@ -372,24 +385,25 @@ ResultSet rs;
         Object o = jspinner2.getValue();
         Number n = (Number) o;
         int quantity = n.intValue();
-        func.addOrder(pid,func.getLastBillId(),quantity);
+        double p = Double.parseDouble(price2.getText());
+        func.addOrderDetail(pid, p, func.getLastOrderId(), quantity);
         //------------------------------------------//
-        
-        ORDER Info = new ORDER();
+
+        ORDER Info = new ORDER(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);
-        
-        
+
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
- ORDER Info = new ORDER();
+        ORDER Info = new ORDER(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
- public void showData() {
+    public void showData() {
         String sql = "select * from product where catID = 2";
         try {
             Connection conn = ConnectionBuilder.getConnection();
@@ -416,7 +430,7 @@ ResultSet rs;
             prodname.setText(rs.getString(2));
             price.setText(rs.getString(4));
             description.setText(rs.getString(3));
-            
+
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
@@ -428,11 +442,12 @@ ResultSet rs;
             prodname2.setText(rs.getString(2));
             price2.setText(rs.getString(4));
             description2.setText(rs.getString(3));
-            
+
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
+
     /**
      * @param args the command line arguments
      */

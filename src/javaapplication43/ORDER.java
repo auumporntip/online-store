@@ -4,20 +4,29 @@
  * and open the template in the editor.
  */
 package javaapplication43;
-import javaapplication43.Bill;
-import javaapplication43.OnlineStore;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import model.ConnectionBuilder;
 import model.Function;
 /**
  *
  * @author acer
  */
 public class ORDER extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form ORDER
      */
+    private String h="",s="",d="",pr="",po="";
+    private String username = "";
     public ORDER() {
         initComponents();
+    }
+    public ORDER(String user) {
+        initComponents();
+        username = user;
     }
 
     /**
@@ -35,8 +44,16 @@ public class ORDER extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        submit = new javax.swing.JButton();
         jToggleButton1 = new javax.swing.JToggleButton();
+        jLabel3 = new javax.swing.JLabel();
+        orderid = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        totalprice = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        location = new javax.swing.JTextArea();
+        editlocation = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -47,6 +64,8 @@ public class ORDER extends javax.swing.JFrame {
         });
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setPreferredSize(new java.awt.Dimension(786, 585));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -54,14 +73,14 @@ public class ORDER extends javax.swing.JFrame {
         jLabel1.setText("ONLINE STORE");
 
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
-        jLabel2.setText("ORDER");
+        jLabel2.setText("ORDER DETIAL");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(572, Short.MAX_VALUE)
+                .addContainerGap(660, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -78,6 +97,8 @@ public class ORDER extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
+
         jTable1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -93,68 +114,82 @@ public class ORDER extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "ORDERID", "PRODUCTID", " QUANTITY", "BILLID"
+                "ลำดับสินค้า", "ชื่อสินค้า", "จำนวน", "ราคา"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setHeaderValue("ORDERID");
-            jTable1.getColumnModel().getColumn(1).setHeaderValue("PRODUCTID");
-            jTable1.getColumnModel().getColumn(2).setHeaderValue(" QUANTITY");
-            jTable1.getColumnModel().getColumn(3).setHeaderValue("BILLID");
-        }
         jTable1.getAccessibleContext().setAccessibleParent(jTable1);
 
-        jButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jButton1.setText("SUBMIT");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 570, 109));
+
+        submit.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        submit.setText("SUBMIT");
+        submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                submitActionPerformed(evt);
             }
         });
+        jPanel1.add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 550, -1, -1));
 
-        jToggleButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jToggleButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jToggleButton1.setText("BACK");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jToggleButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(28, 28, 28))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jToggleButton1))
-                .addGap(70, 70, 70))
-        );
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
+        jLabel3.setText("ORDER :");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 136, -1, -1));
+
+        orderid.setEnabled(false);
+        orderid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                orderidActionPerformed(evt);
+            }
+        });
+        jPanel1.add(orderid, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 138, 106, -1));
+
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
+        jLabel4.setText("Total Price : ");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 294, -1, -1));
+
+        totalprice.setEnabled(false);
+        totalprice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                totalpriceActionPerformed(evt);
+            }
+        });
+        jPanel1.add(totalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(441, 296, 130, -1));
+
+        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
+        jLabel5.setText("Location : ");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, 49));
+
+        location.setColumns(20);
+        location.setFont(new java.awt.Font("Angsana New", 0, 16)); // NOI18N
+        location.setLineWrap(true);
+        location.setRows(5);
+        jScrollPane2.setViewportView(location);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 460, 138));
+
+        editlocation.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        editlocation.setText("EDIT LOCATION");
+        editlocation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editlocationActionPerformed(evt);
+            }
+        });
+        jPanel1.add(editlocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 550, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,15 +199,23 @@ public class ORDER extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    Bill Info = new Bill();
+    private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
+        Bill Info = new Bill();
+        
+        Function func = new Function();
+        double total = Double.parseDouble(totalprice.getText());
+        int lid = func.getLocationId(h, s, d, pr, po);
+        int orid = func.getLastOrderId();
+        func.updateOrder(total,lid,orid);
+       // func.updateOrder(total,locationid);
+        
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);            // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_submitActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-    OnlineStore Info = new OnlineStore();
+    OnlineStore Info = new OnlineStore(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);            // TODO add your handling code here:
@@ -182,8 +225,56 @@ public class ORDER extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         Function func = new Function();
-        func.showOrderTable(jTable1);
+        
+        
+        int orid = func.getLastOrderId();
+        double total = func.getTotalPrice(orid);
+        System.out.println("TOTAL PRICE : "+total);
+        System.out.println(orid+" ORDER");
+        orderid.setText(orid+"");
+        func.showOrderTable(jTable1,orid);
+        totalprice.setText(""+total);
+        
+        String locate = "";
+        try {
+            Connection conn = ConnectionBuilder.getConnection();
+            String sqlCmd = "select * from location where custId = ? ORDER BY locationID DESC";
+            PreparedStatement pstm = conn.prepareStatement(sqlCmd);
+            pstm.setInt(1, func.getCustId(username));
+            ResultSet rs = pstm.executeQuery();
+      
+            if (rs.next()) {
+                locate = rs.getString("houseNo")+" "+rs.getString("street")+" "+rs.getString("district")+" "+rs.getString("province") +" "+rs.getString("postcode");
+                h=rs.getString("houseNo");
+                s=rs.getString("street");
+                d=rs.getString("district");
+                pr=rs.getString("province");
+                po=rs.getString("postcode");
+            }
+
+            conn.close();
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        location.setText(locate);
     }//GEN-LAST:event_formComponentShown
+
+    private void orderidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_orderidActionPerformed
+
+    private void totalpriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalpriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_totalpriceActionPerformed
+
+    private void editlocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editlocationActionPerformed
+        // TODO add your handling code here:
+        Location Info = new Location(username);
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Info.setVisible(true);     
+    }//GEN-LAST:event_editlocationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,13 +315,21 @@ public class ORDER extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton editlocation;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JTextArea location;
+    private javax.swing.JTextField orderid;
+    private javax.swing.JButton submit;
+    private javax.swing.JTextField totalprice;
     // End of variables declaration//GEN-END:variables
 }

@@ -103,6 +103,8 @@ public class User {
             this.password = password;
         }
     }
+    
+    
 
     
     public static void orm(ResultSet rs, User user) throws SQLException {

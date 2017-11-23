@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import javaapplication43.OnlineStore;
 import javaapplication43.ORDER;
 import model.ConnectionBuilder;
+import model.Function;
 
 /**
  *
@@ -24,9 +25,15 @@ public class SPORT extends javax.swing.JFrame {
     /**
      * Creates new form SPORT
      */
+    private String username ="";
     public SPORT() {
         initComponents();
         showData();
+    }
+    public SPORT(String user) {
+        initComponents();
+        showData();
+        username = user;
     }
 
     /**
@@ -62,7 +69,7 @@ public class SPORT extends javax.swing.JFrame {
         prodname2 = new javax.swing.JTextField();
         prodID2 = new javax.swing.JTextField();
         price2 = new javax.swing.JTextField();
-        jSpinner2 = new javax.swing.JSpinner();
+        jspinner1 = new javax.swing.JSpinner();
         jTextField23 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         description2 = new javax.swing.JTextArea();
@@ -70,7 +77,7 @@ public class SPORT extends javax.swing.JFrame {
         description = new javax.swing.JTextArea();
         jTextField24 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
-        jSpinner1 = new javax.swing.JSpinner();
+        jspinner2 = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -230,7 +237,7 @@ public class SPORT extends javax.swing.JFrame {
         price2.setBackground(new java.awt.Color(255, 204, 204));
         price2.setEnabled(false);
         jPanel5.add(price2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 180, -1));
-        jPanel5.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 43, 31));
+        jPanel5.add(jspinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 43, 31));
 
         jTextField23.setBackground(new java.awt.Color(255, 173, 173));
         jTextField23.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
@@ -280,7 +287,7 @@ public class SPORT extends javax.swing.JFrame {
             }
         });
         jPanel5.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, -1, -1));
-        jPanel5.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 43, 31));
+        jPanel5.add(jspinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 43, 31));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\777.png")); // NOI18N
         jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, -1, -1));
@@ -318,7 +325,7 @@ public class SPORT extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        OnlineStore Info = new OnlineStore();
+        OnlineStore Info = new OnlineStore(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);          // TODO add your handling code here:
@@ -333,7 +340,17 @@ public class SPORT extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField10ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        ORDER Info = new ORDER();
+  Function func = new Function();
+        int pid = Integer.parseInt(prodID.getText());
+        Object o = jspinner1.getValue();
+        Number n = (Number) o;
+        int quantity = n.intValue();
+        
+        double p = Double.parseDouble(price.getText());
+        func.addOrderDetail(pid,p,func.getLastOrderId(),quantity);
+        
+        //------------------------------------------//
+        ORDER Info = new ORDER(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);  // TODO add your handling code here:
@@ -348,11 +365,22 @@ public class SPORT extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField24ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        Function func = new Function();
+        int pid = Integer.parseInt(prodID2.getText());
+        Object o = jspinner2.getValue();
+        Number n = (Number) o;
+        int quantity = n.intValue();
+        double p = Double.parseDouble(price2.getText());
+        func.addOrderDetail(pid, p, func.getLastOrderId(), quantity);
+        //------------------------------------------//        
+        ORDER Info = new ORDER(username);
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Info.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
- ORDER Info = new ORDER();
+ ORDER Info = new ORDER(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);        // TODO add your handling code here:
@@ -462,8 +490,6 @@ public class SPORT extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField23;
@@ -474,6 +500,8 @@ public class SPORT extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JSpinner jspinner1;
+    private javax.swing.JSpinner jspinner2;
     private javax.swing.JTextField price;
     private javax.swing.JTextField price2;
     private javax.swing.JTextField prodID;
