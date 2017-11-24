@@ -125,7 +125,7 @@ public class Bill extends javax.swing.JFrame {
         jPanel3.add(ok, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 390, -1, -1));
 
         name.setEnabled(false);
-        jPanel3.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 230, 27));
+        jPanel3.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 290, 27));
 
         orderid.setEnabled(false);
         jPanel3.add(orderid, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 90, 27));
@@ -136,10 +136,10 @@ public class Bill extends javax.swing.JFrame {
                 totalpriceActionPerformed(evt);
             }
         });
-        jPanel3.add(totalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 230, 27));
+        jPanel3.add(totalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 290, 27));
 
         date.setEnabled(false);
-        jPanel3.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 230, 27));
+        jPanel3.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 290, 27));
 
         jLabel10.setFont(new java.awt.Font("Berlin Sans FB", 0, 19)); // NOI18N
         jLabel10.setText("DATE : ");
@@ -150,7 +150,7 @@ public class Bill extends javax.swing.JFrame {
         location.setEnabled(false);
         jScrollPane1.setViewportView(location);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 230, -1));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 290, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 108, 790, 480));
 

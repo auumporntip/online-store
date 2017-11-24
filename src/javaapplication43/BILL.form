@@ -221,7 +221,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="200" y="120" width="230" height="27"/>
+                  <AbsoluteConstraints x="200" y="120" width="290" height="27"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -244,7 +244,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="200" y="160" width="230" height="27"/>
+                  <AbsoluteConstraints x="200" y="160" width="290" height="27"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -254,7 +254,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="200" y="200" width="230" height="27"/>
+                  <AbsoluteConstraints x="200" y="200" width="290" height="27"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -277,7 +277,7 @@
               </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="200" y="250" width="230" height="-1"/>
+                  <AbsoluteConstraints x="200" y="250" width="290" height="-1"/>
                 </Constraint>
               </Constraints>
 
