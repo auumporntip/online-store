@@ -48,10 +48,9 @@ public class Register extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         Back = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         fname = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
@@ -69,7 +68,6 @@ public class Register extends javax.swing.JFrame {
         email = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         register = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
         reset = new javax.swing.JButton();
         password = new javax.swing.JPasswordField();
         rePassword = new javax.swing.JPasswordField();
@@ -100,15 +98,21 @@ public class Register extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 102, 102));
-        jPanel1.setPreferredSize(new java.awt.Dimension(526, 301));
+        jPanel1.setBackground(new java.awt.Color(215, 199, 149));
+        jPanel1.setMinimumSize(new java.awt.Dimension(700, 590));
+        jPanel1.setName(""); // NOI18N
+        jPanel1.setPreferredSize(new java.awt.Dimension(786, 585));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel2.setBackground(new java.awt.Color(154, 54, 29));
         jPanel2.setPreferredSize(new java.awt.Dimension(241, 237));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jLabel1.setText("ONLINE STORE");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 105, -1, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 144, -1, -1));
 
         Back.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         Back.setText("BACK");
@@ -117,56 +121,21 @@ public class Register extends javax.swing.JFrame {
                 BackActionPerformed(evt);
             }
         });
+        jPanel2.add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, -1, -1));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel14)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel2)))
-                        .addGap(46, 46, 46))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(30, 30, 30))))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(Back)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(71, 71, 71)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addGap(39, 39, 39)
-                .addComponent(jLabel5)
-                .addGap(77, 77, 77)
-                .addComponent(jLabel14)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 287, Short.MAX_VALUE)
-                .addComponent(Back)
-                .addGap(53, 53, 53))
-        );
+        jLabel14.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\register.png")); // NOI18N
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 590));
 
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
         jLabel3.setText("REGISTER");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 160, 46));
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(521, 13, 158, 66));
 
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel6.setText("FIRSTNAME");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, -1, -1));
-        jPanel1.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 250, -1));
+        jPanel1.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 190, -1));
 
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel8.setText("LASTNAME");
@@ -177,7 +146,7 @@ public class Register extends javax.swing.JFrame {
                 lnameActionPerformed(evt);
             }
         });
-        jPanel1.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 250, -1));
+        jPanel1.add(lname, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 190, -1));
 
         jLabel9.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel9.setText("GENDER");
@@ -229,7 +198,7 @@ public class Register extends javax.swing.JFrame {
                 phoneActionPerformed(evt);
             }
         });
-        jPanel1.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 250, -1));
+        jPanel1.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 190, -1));
 
         jLabel12.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel12.setText("EMAIL");
@@ -240,7 +209,7 @@ public class Register extends javax.swing.JFrame {
                 emailActionPerformed(evt);
             }
         });
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 250, -1));
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 190, -1));
 
         jLabel13.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel13.setText("PASSWORD");
@@ -253,8 +222,7 @@ public class Register extends javax.swing.JFrame {
                 registerActionPerformed(evt);
             }
         });
-        jPanel1.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 507, -1, -1));
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(686, 79, -1, -1));
+        jPanel1.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 510, -1, -1));
 
         reset.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         reset.setText("RESET");
@@ -263,14 +231,14 @@ public class Register extends javax.swing.JFrame {
                 resetActionPerformed(evt);
             }
         });
-        jPanel1.add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(339, 507, -1, -1));
+        jPanel1.add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, -1, -1));
 
         password.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 passwordKeyReleased(evt);
             }
         });
-        jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 250, -1));
+        jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 190, -1));
 
         rePassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,14 +250,14 @@ public class Register extends javax.swing.JFrame {
                 rePasswordKeyReleased(evt);
             }
         });
-        jPanel1.add(rePassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, 249, -1));
+        jPanel1.add(rePassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, 190, -1));
 
         username.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 usernameKeyReleased(evt);
             }
         });
-        jPanel1.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 250, -1));
+        jPanel1.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 190, -1));
 
         jLabel16.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel16.setText("USERNAME");
@@ -313,11 +281,11 @@ public class Register extends javax.swing.JFrame {
 
         jLabel18.setFont(new java.awt.Font("supermarket", 1, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 0, 51));
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 380, 160, 30));
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 390, 160, 30));
 
         jLabel17.setFont(new java.awt.Font("supermarket", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 0, 51));
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 420, 160, 30));
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 420, 160, 30));
 
         jLabel23.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel23.setText("HOUSENO");
@@ -326,7 +294,7 @@ public class Register extends javax.swing.JFrame {
         jLabel24.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel24.setText("STREET");
         jLabel24.setToolTipText("");
-        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, -1, -1));
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, -1, -1));
 
         jLabel25.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel25.setText("DISTRICT");
@@ -339,13 +307,13 @@ public class Register extends javax.swing.JFrame {
         jLabel27.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel27.setText("POSTCODE");
         jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, -1, -1));
-        jPanel1.add(houseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, 110, -1));
-        jPanel1.add(street, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 140, -1));
-        jPanel1.add(district, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 250, -1));
-        jPanel1.add(province, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 250, -1));
-        jPanel1.add(postcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 250, -1));
+        jPanel1.add(houseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, 100, -1));
+        jPanel1.add(street, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 120, -1));
+        jPanel1.add(district, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 190, -1));
+        jPanel1.add(province, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 190, -1));
+        jPanel1.add(postcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 190, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 786, 585));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 786, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -549,7 +517,6 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -564,7 +531,6 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

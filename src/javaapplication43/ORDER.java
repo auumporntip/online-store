@@ -42,18 +42,19 @@ public class ORDER extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jPanel3 = new javax.swing.JPanel();
+        editlocation = new javax.swing.JButton();
+        submit = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        submit = new javax.swing.JButton();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jLabel3 = new javax.swing.JLabel();
-        orderid = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        totalprice = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         location = new javax.swing.JTextArea();
-        editlocation = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        totalprice = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        orderid = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -62,44 +63,62 @@ public class ORDER extends javax.swing.JFrame {
                 formComponentShown(evt);
             }
         });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(786, 585));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ONLINE STORE");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 0, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("ORDER DETIAL");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(660, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap())
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addContainerGap())
-        );
+        jToggleButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jToggleButton1.setText("BACK");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 30));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 90));
 
-        jTable1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        jPanel3.setBackground(new java.awt.Color(62, 145, 193));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        editlocation.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        editlocation.setText("EDIT LOCATION");
+        editlocation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editlocationActionPerformed(evt);
+            }
+        });
+        jPanel3.add(editlocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 430, -1, 30));
+
+        submit.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        submit.setText("SUBMIT");
+        submit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitActionPerformed(evt);
+            }
+        });
+        jPanel3.add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, -1, 30));
+
+        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
+        jLabel4.setText("Total Price : ");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, -1, -1));
+
+        jTable1.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -117,44 +136,24 @@ public class ORDER extends javax.swing.JFrame {
                 "ลำดับสินค้า", "ชื่อสินค้า", "จำนวน", "ราคา"
             }
         ));
+        jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jTable1.setIntercellSpacing(new java.awt.Dimension(15, 3));
         jScrollPane1.setViewportView(jTable1);
         jTable1.getAccessibleContext().setAccessibleParent(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 570, 109));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 610, 109));
 
-        submit.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        submit.setText("SUBMIT");
-        submit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitActionPerformed(evt);
-            }
-        });
-        jPanel1.add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 550, -1, -1));
+        location.setColumns(20);
+        location.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
+        location.setRows(5);
+        location.setEnabled(false);
+        jScrollPane2.setViewportView(location);
 
-        jToggleButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jToggleButton1.setText("BACK");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, -1, -1));
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 510, 120));
 
-        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
-        jLabel3.setText("ORDER :");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 136, -1, -1));
-
-        orderid.setEnabled(false);
-        orderid.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                orderidActionPerformed(evt);
-            }
-        });
-        jPanel1.add(orderid, new org.netbeans.lib.awtextra.AbsoluteConstraints(222, 138, 106, -1));
-
-        jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
-        jLabel4.setText("Total Price : ");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 294, -1, -1));
+        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
+        jLabel5.setText("Location : ");
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, -1, 49));
 
         totalprice.setEnabled(false);
         totalprice.addActionListener(new java.awt.event.ActionListener() {
@@ -162,39 +161,24 @@ public class ORDER extends javax.swing.JFrame {
                 totalpriceActionPerformed(evt);
             }
         });
-        jPanel1.add(totalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(441, 296, 130, -1));
+        jPanel3.add(totalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 130, 30));
 
-        jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
-        jLabel5.setText("Location : ");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, 49));
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
+        jLabel3.setText("ORDER :");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, -1, -1));
 
-        location.setColumns(20);
-        location.setFont(new java.awt.Font("Angsana New", 0, 16)); // NOI18N
-        location.setLineWrap(true);
-        location.setRows(5);
-        jScrollPane2.setViewportView(location);
-
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 460, 138));
-
-        editlocation.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        editlocation.setText("EDIT LOCATION");
-        editlocation.addActionListener(new java.awt.event.ActionListener() {
+        orderid.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        orderid.setEnabled(false);
+        orderid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editlocationActionPerformed(evt);
+                orderidActionPerformed(evt);
             }
         });
-        jPanel1.add(editlocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 550, -1, -1));
+        jPanel3.add(orderid, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 106, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 790, 490));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -323,6 +307,7 @@ public class ORDER extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
