@@ -8,6 +8,8 @@ package javaapplication43;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import model.ConnectionBuilder;
 import model.Function;
 /**
@@ -15,12 +17,9 @@ import model.Function;
  * @author acer
  */
 public class ORDER extends javax.swing.JFrame {
-    
-    /**
-     * Creates new form ORDER
-     */
     private String h="",s="",d="",pr="",po="";
     private String username = "";
+    private int orderdetail_id=0;
     public ORDER() {
         initComponents();
     }
@@ -55,6 +54,7 @@ public class ORDER extends javax.swing.JFrame {
         totalprice = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         orderid = new javax.swing.JTextField();
+        delete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -116,8 +116,9 @@ public class ORDER extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
         jLabel4.setText("Total Price : ");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, -1, -1));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, -1, -1));
 
+        jTable1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jTable1.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -138,10 +139,15 @@ public class ORDER extends javax.swing.JFrame {
         ));
         jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTable1.setIntercellSpacing(new java.awt.Dimension(15, 3));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
         jTable1.getAccessibleContext().setAccessibleParent(jTable1);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 610, 109));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 590, 109));
 
         location.setColumns(20);
         location.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
@@ -149,11 +155,11 @@ public class ORDER extends javax.swing.JFrame {
         location.setEnabled(false);
         jScrollPane2.setViewportView(location);
 
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 510, 120));
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 510, 120));
 
         jLabel5.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
         jLabel5.setText("Location : ");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, -1, 49));
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, 49));
 
         totalprice.setEnabled(false);
         totalprice.addActionListener(new java.awt.event.ActionListener() {
@@ -161,11 +167,11 @@ public class ORDER extends javax.swing.JFrame {
                 totalpriceActionPerformed(evt);
             }
         });
-        jPanel3.add(totalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 130, 30));
+        jPanel3.add(totalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 150, 30));
 
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
         jLabel3.setText("ORDER :");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, -1, -1));
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
         orderid.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         orderid.setEnabled(false);
@@ -174,7 +180,16 @@ public class ORDER extends javax.swing.JFrame {
                 orderidActionPerformed(evt);
             }
         });
-        jPanel3.add(orderid, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 106, -1));
+        jPanel3.add(orderid, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 106, -1));
+
+        delete.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\delete.png")); // NOI18N
+        delete.setBorder(null);
+        delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteActionPerformed(evt);
+            }
+        });
+        jPanel3.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 80, 40, 40));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 790, 490));
 
@@ -260,6 +275,33 @@ public class ORDER extends javax.swing.JFrame {
         Info.setVisible(true);     
     }//GEN-LAST:event_editlocationActionPerformed
 
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
+        // TODO add your handling code here:
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(null, "You want to delete order detail id "+orderdetail_id+" ?", "Warning", dialogButton);
+        if (dialogResult == JOptionPane.YES_OPTION) {
+            // Saving code here
+            Function func = new Function();
+            func.deleteOrderDetail(orderdetail_id);
+            int orid = func.getLastOrderId();
+            double total = func.getTotalPrice(orid);
+            func.showOrderTable(jTable1,orid);
+            totalprice.setText(""+total);
+        }
+        
+    }//GEN-LAST:event_deleteActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:o
+        String ordtId;
+        DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
+        
+        ordtId = model.getValueAt(jTable1.getSelectedRow(),0).toString();
+        orderdetail_id = Integer.parseInt(ordtId);
+        System.out.println(orderdetail_id);
+        
+    }//GEN-LAST:event_jTable1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -299,6 +341,7 @@ public class ORDER extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton delete;
     private javax.swing.JButton editlocation;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

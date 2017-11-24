@@ -290,5 +290,23 @@ public class Function {
 
         }
     }
+    public static void deleteOrderDetail(int orderdetail_id) {
+
+        try {
+            Connection conn = ConnectionBuilder.getConnection();
+            String sql = "DELETE FROM order_detail WHERE order_detailID=? ";
+            
+            PreparedStatement pstm = conn.prepareStatement(sql);
+
+            pstm.setInt(1, orderdetail_id);
+     
+            
+            int rs = pstm.executeUpdate();
+            System.out.println("delete ORDER detail SUCCESS");
+            conn.close();
+        } catch (Exception ex) {
+            System.out.println("delete ORDER detail Error");
+        }
+    }
     
 }

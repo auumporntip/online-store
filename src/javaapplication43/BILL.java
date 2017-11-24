@@ -50,7 +50,7 @@ public class Bill extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        ok = new javax.swing.JButton();
         name = new javax.swing.JTextField();
         orderid = new javax.swing.JTextField();
         totalprice = new javax.swing.JTextField();
@@ -115,14 +115,14 @@ public class Bill extends javax.swing.JFrame {
         jLabel11.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\receipt (2).png")); // NOI18N
         jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, 130, 140));
 
-        jButton2.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
-        jButton2.setText("REVIEW");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ok.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
+        ok.setText("OK");
+        ok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                okActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 390, -1, -1));
+        jPanel3.add(ok, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 390, -1, -1));
 
         name.setEnabled(false);
         jPanel3.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 230, 27));
@@ -159,12 +159,13 @@ public class Bill extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-   Review Info = new Review();
+    private void okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okActionPerformed
+        Login Info = new Login();
+        username = null;
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_okActionPerformed
 
     private void totalpriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalpriceActionPerformed
         // TODO add your handling code here:
@@ -213,7 +214,6 @@ public class Bill extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField date;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -230,6 +230,7 @@ public class Bill extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea location;
     private javax.swing.JTextField name;
+    private javax.swing.JButton ok;
     private javax.swing.JTextField orderid;
     private javax.swing.JTextField totalprice;
     // End of variables declaration//GEN-END:variables
