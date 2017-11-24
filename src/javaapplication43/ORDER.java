@@ -184,14 +184,14 @@ public class ORDER extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
-        Bill Info = new Bill();
+        Bill Info = new Bill(username);
         
         Function func = new Function();
         double total = Double.parseDouble(totalprice.getText());
         int lid = func.getLocationId(h, s, d, pr, po);
         int orid = func.getLastOrderId();
         func.updateOrder(total,lid,orid);
-       // func.updateOrder(total,locationid);
+        
         
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);

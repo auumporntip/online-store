@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.text.DateFormat;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+import javaapplication43.Bill;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -242,7 +243,7 @@ public class Function {
         }
 
     }
-
+    
     public double getTotalPrice(int orderId) {
         double totalPrice = 0.0,sum = 0.0;
         try {
@@ -270,6 +271,7 @@ public class Function {
         }
         return totalPrice;
     }
+
     public void addLocation(String houseNo, String street ,String district,String province, String postcode, int custID) throws SQLException {
         try (Connection con = ConnectionBuilder.getConnection()) {
             PreparedStatement regis

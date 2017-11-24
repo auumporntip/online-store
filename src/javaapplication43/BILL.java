@@ -4,7 +4,13 @@
  * and open the template in the editor.
  */
 package javaapplication43;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javaapplication43.Review;
+import model.ConnectionBuilder;
+import model.Function;
 /**
  *
  * @author acer
@@ -14,8 +20,13 @@ public class Bill extends javax.swing.JFrame {
     /**
      * Creates new form BILL
      */
+    private String username=null;
     public Bill() {
         initComponents();
+    }
+    public Bill(String user) {
+        initComponents();
+        username = user;
     }
 
     /**
@@ -40,13 +51,13 @@ public class Bill extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        name = new javax.swing.JTextField();
+        orderid = new javax.swing.JTextField();
+        totalprice = new javax.swing.JTextField();
+        date = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        location = new javax.swing.JTextArea();
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
@@ -55,6 +66,11 @@ public class Bill extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -96,8 +112,8 @@ public class Bill extends javax.swing.JFrame {
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 407, -1, -1));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pic/receipt (2).png"))); // NOI18N
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, -1));
+        jLabel11.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\receipt (2).png")); // NOI18N
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, 130, 140));
 
         jButton2.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         jButton2.setText("REVIEW");
@@ -108,31 +124,31 @@ public class Bill extends javax.swing.JFrame {
         });
         jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 390, -1, -1));
 
-        jTextField1.setEnabled(false);
-        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 230, 27));
+        name.setEnabled(false);
+        jPanel3.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 230, 27));
 
-        jTextField2.setEnabled(false);
-        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 90, 27));
+        orderid.setEnabled(false);
+        jPanel3.add(orderid, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 90, 27));
 
-        jTextField3.setEnabled(false);
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        totalprice.setEnabled(false);
+        totalprice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                totalpriceActionPerformed(evt);
             }
         });
-        jPanel3.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 230, 27));
+        jPanel3.add(totalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 230, 27));
 
-        jTextField4.setEnabled(false);
-        jPanel3.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 230, 27));
+        date.setEnabled(false);
+        jPanel3.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 230, 27));
 
         jLabel10.setFont(new java.awt.Font("Berlin Sans FB", 0, 19)); // NOI18N
         jLabel10.setText("DATE : ");
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setEnabled(false);
-        jScrollPane1.setViewportView(jTextArea1);
+        location.setColumns(20);
+        location.setRows(5);
+        location.setEnabled(false);
+        jScrollPane1.setViewportView(location);
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 230, -1));
 
@@ -150,9 +166,14 @@ public class Bill extends javax.swing.JFrame {
         Info.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void totalpriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalpriceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_totalpriceActionPerformed
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        // TODO add your handling code here:
+        showDetail();
+    }//GEN-LAST:event_formComponentShown
 
     /**
      * @param args the command line arguments
@@ -191,6 +212,7 @@ public class Bill extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField date;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -206,10 +228,65 @@ public class Bill extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextArea location;
+    private javax.swing.JTextField name;
+    private javax.swing.JTextField orderid;
+    private javax.swing.JTextField totalprice;
     // End of variables declaration//GEN-END:variables
+
+    private void showDetail() {
+        Function func = new Function();
+        Connection conn = ConnectionBuilder.getConnection();
+        PreparedStatement s = null;
+        String sql="";
+        try {
+            sql = "SELECT o.orderId,c.fname,o.totalprice,o.orderDate FROM orders o JOIN customer c ON o.custID=c.custID WHERE o.orderID = ? ORDER BY 1";
+
+            s = conn.prepareStatement(sql);
+            
+            s.setInt(1,func.getLastOrderId());
+           
+            ResultSet rs=s.executeQuery();
+            while(rs.next()){
+
+                orderid.setText(""+rs.getInt("orderId"));
+                name.setText(rs.getString("fname"));
+                totalprice.setText(rs.getDouble("totalPrice")+"");
+                date.setText(rs.getString("orderDate"));
+              
+            }
+            conn.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            
+        }
+        try {
+            if (s != null) {
+                s.close();
+                conn.close();
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+        conn = ConnectionBuilder.getConnection();
+        String locate="";
+        try {
+            String sqlCmd = "select * from location where custId = ? ORDER BY locationID DESC";
+            PreparedStatement pstm = conn.prepareStatement(sqlCmd);
+            pstm.setInt(1, func.getCustId(username));
+            ResultSet rs = pstm.executeQuery();
+      
+            if (rs.next()) {
+                locate = rs.getString("houseNo")+" "+rs.getString("street")+" "+rs.getString("district")+" "+rs.getString("province") +" "+rs.getString("postcode");
+
+                location.setText(locate);
+            }
+
+            conn.close();
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 }
