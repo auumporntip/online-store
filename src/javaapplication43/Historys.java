@@ -72,6 +72,8 @@ public class Historys extends javax.swing.JFrame {
         jLabel3.setText("HISTORY");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 150, 46));
 
+        History.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        History.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
         History.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},

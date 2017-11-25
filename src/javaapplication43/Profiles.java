@@ -249,8 +249,11 @@ public class Profiles extends javax.swing.JFrame {
     private void historyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_historyActionPerformed
         // TODO add your handling code here:
         Historys online = new Historys(username);
-        setVisible(false);
+            
+        this.dispose();
+        online.setDefaultCloseOperation(EXIT_ON_CLOSE);
         online.setVisible(true);
+        
     }//GEN-LAST:event_historyActionPerformed
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
@@ -302,9 +305,11 @@ public class Profiles extends javax.swing.JFrame {
 
     private void shopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shopActionPerformed
         // TODO add your handling code here:
-        OnlineStore online = new OnlineStore(username);
-        setVisible(false);
+        OnlineStore online = new OnlineStore(username);    
+        this.dispose();
+        online.setDefaultCloseOperation(EXIT_ON_CLOSE);
         online.setVisible(true);
+        
     }//GEN-LAST:event_shopActionPerformed
 
     private void firstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstnameActionPerformed
