@@ -112,7 +112,7 @@ public class OnlineStore extends javax.swing.JFrame {
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 786, 71));
 
-        jPanel2.setBackground(new java.awt.Color(143, 171, 214));
+        jPanel2.setBackground(new java.awt.Color(51, 51, 102));
         jPanel2.setMinimumSize(new java.awt.Dimension(786, 585));
         jPanel2.setPreferredSize(new java.awt.Dimension(786, 585));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javaapplication43.Review;
+
 import model.ConnectionBuilder;
 import model.Function;
 /**
@@ -85,10 +85,10 @@ public class Bill extends javax.swing.JFrame {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 0, -1, -1));
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("BILL");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, 20));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 110, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
 
@@ -113,7 +113,7 @@ public class Bill extends javax.swing.JFrame {
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(644, 407, -1, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\receipt (2).png")); // NOI18N
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, 130, 140));
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, 130, 140));
 
         ok.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         ok.setText("OK");
@@ -122,14 +122,17 @@ public class Bill extends javax.swing.JFrame {
                 okActionPerformed(evt);
             }
         });
-        jPanel3.add(ok, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 390, -1, -1));
+        jPanel3.add(ok, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 400, -1, -1));
 
+        name.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         name.setEnabled(false);
         jPanel3.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 290, 27));
 
+        orderid.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         orderid.setEnabled(false);
         jPanel3.add(orderid, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 90, 27));
 
+        totalprice.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         totalprice.setEnabled(false);
         totalprice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,6 +141,7 @@ public class Bill extends javax.swing.JFrame {
         });
         jPanel3.add(totalprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 290, 27));
 
+        date.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         date.setEnabled(false);
         jPanel3.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 290, 27));
 
@@ -146,6 +150,7 @@ public class Bill extends javax.swing.JFrame {
         jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
 
         location.setColumns(20);
+        location.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         location.setRows(5);
         location.setEnabled(false);
         jScrollPane1.setViewportView(location);
@@ -241,7 +246,7 @@ public class Bill extends javax.swing.JFrame {
         PreparedStatement s = null;
         String sql="";
         try {
-            sql = "SELECT o.orderId,c.fname,o.totalprice,o.orderDate FROM orders o JOIN customer c ON o.custID=c.custID WHERE o.orderID = ? ORDER BY 1";
+            sql = "SELECT o.orderId,CONCAT(c.fname,'   ',c.lname) as name,o.totalprice,o.orderDate FROM orders o JOIN customer c ON o.custID=c.custID WHERE o.orderID = ? ORDER BY 1";
 
             s = conn.prepareStatement(sql);
             
@@ -251,7 +256,7 @@ public class Bill extends javax.swing.JFrame {
             while(rs.next()){
 
                 orderid.setText(""+rs.getInt("orderId"));
-                name.setText(rs.getString("fname"));
+                name.setText(rs.getString("name"));
                 totalprice.setText(rs.getDouble("totalPrice")+"");
                 date.setText(rs.getString("orderDate"));
               

@@ -146,7 +146,27 @@ public class Function {
             ex.printStackTrace();
         }
     }
-    
+    public static void addReview(int order_detailID, int rating,String comment) {
+        boolean status = false;
+        
+        try {
+            Connection conn = ConnectionBuilder.getConnection();
+            String sql = "INSERT INTO review "
+                    +"(order_detailID,reviewrating,comment) " 
+                    + "VALUES (?,?,?)";
+            System.out.println("1");
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setInt(1, order_detailID);
+            pstm.setInt(2, rating);
+            pstm.setString(3, comment);
+            
+            int rs = pstm.executeUpdate();
+            System.out.println("ADD Review Detail SUCCESS");
+            conn.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
     public static void updateOrder(double totalprice,int locationid ,int orderid) {
 
         boolean status = false;
@@ -200,7 +220,7 @@ public class Function {
     public static void showOrderTable(JTable jTable1,int orderId){
         jTable1.setModel(new DefaultTableModel());
         DefaultTableModel lct=(DefaultTableModel)jTable1.getModel();
-        lct.addColumn("ลำดับสินค้า");
+        lct.addColumn("OrderDetail ID");
         lct.addColumn("ชื่อสินค้า");
         lct.addColumn("จำนวน");
         lct.addColumn("ราคา");

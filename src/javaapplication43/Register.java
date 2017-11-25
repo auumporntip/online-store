@@ -123,7 +123,7 @@ public class Register extends javax.swing.JFrame {
         });
         jPanel2.add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, -1, -1));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\register.png")); // NOI18N
+        jLabel14.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\regis2.png")); // NOI18N
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 590));
@@ -135,12 +135,15 @@ public class Register extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel6.setText("FIRSTNAME");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, -1, -1));
+
+        fname.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(fname, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 190, -1));
 
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel8.setText("LASTNAME");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, -1));
 
+        lname.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lnameActionPerformed(evt);
@@ -193,6 +196,7 @@ public class Register extends javax.swing.JFrame {
         jLabel11.setText("PHONE");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, -1, -1));
 
+        phone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         phone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 phoneActionPerformed(evt);
@@ -204,6 +208,7 @@ public class Register extends javax.swing.JFrame {
         jLabel12.setText("EMAIL");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, -1, -1));
 
+        email.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailActionPerformed(evt);
@@ -233,6 +238,7 @@ public class Register extends javax.swing.JFrame {
         });
         jPanel1.add(reset, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, -1, -1));
 
+        password.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         password.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 passwordKeyReleased(evt);
@@ -240,6 +246,7 @@ public class Register extends javax.swing.JFrame {
         });
         jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 190, -1));
 
+        rePassword.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         rePassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rePasswordActionPerformed(evt);
@@ -252,6 +259,7 @@ public class Register extends javax.swing.JFrame {
         });
         jPanel1.add(rePassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, 190, -1));
 
+        username.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         username.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 usernameKeyReleased(evt);
@@ -307,10 +315,20 @@ public class Register extends javax.swing.JFrame {
         jLabel27.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         jLabel27.setText("POSTCODE");
         jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, -1, -1));
+
+        houseno.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(houseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, 100, -1));
+
+        street.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(street, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 120, -1));
+
+        district.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(district, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 190, -1));
+
+        province.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(province, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 190, -1));
+
+        postcode.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(postcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 190, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 786, 590));

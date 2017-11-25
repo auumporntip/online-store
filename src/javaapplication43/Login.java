@@ -196,11 +196,10 @@ public class Login extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Wrong Username or Password!", "Invalid", JOptionPane.WARNING_MESSAGE);
             } else {
                 System.out.println("Login success");
-                OnlineStore online = new OnlineStore(username.getText());
+                Profiles online = new Profiles(username.getText());
                 this.dispose();
                 online.setVisible(true);
-                Function func = new Function();
-                func.addOrder(func.getCustId(username.getText()));
+                
                 
 
             }

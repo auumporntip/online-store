@@ -169,6 +169,7 @@ public class ACCESSORIES extends javax.swing.JFrame {
 
         description2.setBackground(new java.awt.Color(255, 204, 204));
         description2.setColumns(20);
+        description2.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         description2.setLineWrap(true);
         description2.setRows(5);
         description2.setEnabled(false);
@@ -180,6 +181,7 @@ public class ACCESSORIES extends javax.swing.JFrame {
 
         description.setBackground(new java.awt.Color(255, 204, 204));
         description.setColumns(20);
+        description.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         description.setLineWrap(true);
         description.setRows(5);
         description.setEnabled(false);

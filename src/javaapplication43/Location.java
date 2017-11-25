@@ -38,30 +38,83 @@ public class Location extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        Edit = new javax.swing.JButton();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         houseno = new javax.swing.JTextField();
-        street = new javax.swing.JTextField();
         district = new javax.swing.JTextField();
         province = new javax.swing.JTextField();
         postcode = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        Edit = new javax.swing.JButton();
+        street = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         back = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(526, 301));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel23.setFont(new java.awt.Font("Berlin Sans FB", 0, 16)); // NOI18N
+        jLabel23.setText("HOUSENO");
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, -1));
+
+        jLabel24.setFont(new java.awt.Font("Berlin Sans FB", 0, 16)); // NOI18N
+        jLabel24.setText("STREET");
+        jLabel24.setToolTipText("");
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, -1, -1));
+
+        jLabel25.setFont(new java.awt.Font("Berlin Sans FB", 0, 16)); // NOI18N
+        jLabel25.setText("DISTRICT");
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, -1, -1));
+
+        jLabel26.setFont(new java.awt.Font("Berlin Sans FB", 0, 16)); // NOI18N
+        jLabel26.setText("PROVINCE");
+        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, -1, -1));
+
+        jLabel27.setFont(new java.awt.Font("Berlin Sans FB", 0, 16)); // NOI18N
+        jLabel27.setText("POSTCODE");
+        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, -1, -1));
+
+        houseno.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(houseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 110, -1));
+
+        district.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(district, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 310, -1));
+
+        province.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(province, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 310, -1));
+
+        postcode.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(postcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 310, -1));
+
+        jPanel2.setBackground(new java.awt.Color(23, 26, 35));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("LOCATION EDIT");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 270, 46));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 270, 46));
+
+        jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("ONLINE STORE");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 0, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 100));
+
+        jPanel3.setBackground(new java.awt.Color(211, 78, 112));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Edit.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         Edit.setText("EDIT");
@@ -70,52 +123,25 @@ public class Location extends javax.swing.JFrame {
                 EditActionPerformed(evt);
             }
         });
-        jPanel1.add(Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, -1, -1));
+        jPanel3.add(Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, -1, -1));
 
-        jLabel23.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jLabel23.setText("HOUSENO");
-        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, -1));
+        street.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel3.add(street, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 60, 140, -1));
 
-        jLabel24.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jLabel24.setText("STREET");
-        jLabel24.setToolTipText("");
-        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, -1, -1));
-
-        jLabel25.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jLabel25.setText("DISTRICT");
-        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, -1, -1));
-
-        jLabel26.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jLabel26.setText("PROVINCE");
-        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, -1, -1));
-
-        jLabel27.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jLabel27.setText("POSTCODE");
-        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, -1, -1));
-        jPanel1.add(houseno, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 110, -1));
-        jPanel1.add(street, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 140, -1));
-        jPanel1.add(district, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 310, -1));
-        jPanel1.add(province, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 310, -1));
-        jPanel1.add(postcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 310, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\location2.png")); // NOI18N
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 350, 290));
 
         back.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         back.setText("BACK");
-        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, -1, -1));
+        jPanel3.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 786, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 790, 480));
+
+        jPanel4.setBackground(new java.awt.Color(247, 228, 136));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 630, 200));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 786, 585));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -175,13 +201,18 @@ public class Location extends javax.swing.JFrame {
     private javax.swing.JButton back;
     private javax.swing.JTextField district;
     private javax.swing.JTextField houseno;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField postcode;
     private javax.swing.JTextField province;
     private javax.swing.JTextField street;
