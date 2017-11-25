@@ -20,15 +20,16 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form LOGIN2
      */
-    private String username1 = "";
+    
     public Login() {
         initComponents();
         user.setCustID(0);
+        
     }
  public Login(String us) {
         initComponents();
         user.setCustID(0);
-        username1 = us;
+      
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -61,7 +62,7 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(786, 585));
-        setPreferredSize(new java.awt.Dimension(786, 585));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 102, 102));
@@ -141,6 +142,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 786, 585));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
@@ -153,7 +155,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_loginActionPerformed
 
     private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
-        Register Info = new Register(username1);
+        Register Info = new Register();
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);
@@ -199,7 +201,8 @@ public class Login extends javax.swing.JFrame {
                 Profiles online = new Profiles(username.getText());
                 this.dispose();
                 online.setVisible(true);
-                
+                Function func = new Function();
+                func.addOrder(func.getCustId(username.getText()));
                 
 
             }
@@ -235,6 +238,7 @@ public class Login extends javax.swing.JFrame {
     public void setId(int us) {
         user.setCustID(us);
     }
+             
 
     public static void main(String args[]) {
 

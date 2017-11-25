@@ -47,7 +47,6 @@ public class Review extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -62,8 +61,14 @@ public class Review extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         comment = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setResizable(false);
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 formComponentShown(evt);
@@ -71,13 +76,9 @@ public class Review extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(526, 301));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
-        jLabel3.setText("REVIEW");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 150, 46));
 
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 19)); // NOI18N
         jLabel6.setText("ODER DETAIL ID :");
@@ -94,7 +95,11 @@ public class Review extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Berlin Sans FB", 0, 19)); // NOI18N
         jLabel9.setText("RAVIEW RATING : ");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, -1, -1));
+
+        productname.setEnabled(false);
         jPanel1.add(productname, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 240, -1));
+
+        orderdetailid.setEnabled(false);
         jPanel1.add(orderdetailid, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 150, -1));
 
         radio5.setText("5");
@@ -142,8 +147,9 @@ public class Review extends javax.swing.JFrame {
         comment.setRows(5);
         jScrollPane1.setViewportView(comment);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 370, -1));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 370, -1));
 
+        jButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jButton1.setText("SUBMIT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,9 +158,29 @@ public class Review extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 520, -1, -1));
 
+        jPanel2.setBackground(new java.awt.Color(23, 26, 35));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("REVIEW");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 130, 46));
+
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("ONLINE STORE");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(657, 0, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 100));
+
+        jPanel3.setBackground(new java.awt.Color(232, 194, 35));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 790, 480));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 786, 585));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -176,6 +202,7 @@ public class Review extends javax.swing.JFrame {
         }
         
         Function func = new Function();
+
         func.addReview(orderdetail_id,rating,comment.getText());
         
         DetailbyHistory online = new DetailbyHistory(username,orid);
@@ -282,12 +309,15 @@ public class Review extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea comment;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField orderdetailid;
     private javax.swing.JTextField productname;

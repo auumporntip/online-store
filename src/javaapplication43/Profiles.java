@@ -40,8 +40,7 @@ public class Profiles extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        back = new javax.swing.JButton();
+        logout = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -52,15 +51,21 @@ public class Profiles extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         usern = new javax.swing.JTextField();
         email = new javax.swing.JTextField();
-        firstname = new javax.swing.JTextField();
         lastname = new javax.swing.JTextField();
         gender = new javax.swing.JTextField();
         birthday = new javax.swing.JTextField();
         phone = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         location = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        jLabel1 = new javax.swing.JLabel();
+        history = new javax.swing.JButton();
+        shop = new javax.swing.JToggleButton();
+        firstname = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -72,74 +77,78 @@ public class Profiles extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel2.setBackground(new java.awt.Color(147, 205, 180));
         jPanel2.setPreferredSize(new java.awt.Dimension(526, 301));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
-        jLabel3.setText("PROFILE");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, 140, 46));
-
-        back.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        back.setText("BACK");
-        jPanel2.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, -1, -1));
+        logout.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        logout.setText("LOG OUT");
+        logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutActionPerformed(evt);
+            }
+        });
+        jPanel2.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel6.setText("USERNAME");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel8.setText("LASTNAME");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, -1, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 160, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel9.setText("GENDER ");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel10.setText("BIRTHDATE");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, -1, -1));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel11.setText("PHONE");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, -1, -1));
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel12.setText("LOCATION");
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel13.setText("EMAIL");
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, -1, -1));
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         jLabel7.setText("FIRSTNAME ");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
-        jPanel2.add(usern, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 190, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, -1, -1));
 
+        usern.setEnabled(false);
+        jPanel2.add(usern, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 160, -1));
+
+        email.setEnabled(false);
         email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailActionPerformed(evt);
             }
         });
-        jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 190, -1));
+        jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 160, -1));
 
-        firstname.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                firstnameActionPerformed(evt);
-            }
-        });
-        jPanel2.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 190, -1));
-
+        lastname.setEnabled(false);
         lastname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lastnameActionPerformed(evt);
             }
         });
-        jPanel2.add(lastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 190, -1));
-        jPanel2.add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 190, -1));
-        jPanel2.add(birthday, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 190, -1));
-        jPanel2.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 190, -1));
+        jPanel2.add(lastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 160, 160, -1));
+
+        gender.setEnabled(false);
+        jPanel2.add(gender, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 160, -1));
+
+        birthday.setEnabled(false);
+        jPanel2.add(birthday, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 160, -1));
+
+        phone.setEnabled(false);
+        jPanel2.add(phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 160, -1));
 
         location.setColumns(20);
         location.setFont(new java.awt.Font("BrowalliaUPC", 0, 24)); // NOI18N
@@ -147,33 +156,68 @@ public class Profiles extends javax.swing.JFrame {
         location.setEnabled(false);
         jScrollPane2.setViewportView(location);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 310, 100));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, 360, 100));
 
-        jButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jButton1.setText("HISTORY");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 15)); // NOI18N
+        jLabel1.setText("SHOP  NOW!!");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 470, 110, -1));
+
+        history.setBackground(new java.awt.Color(204, 255, 204));
+        history.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        history.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\history-icon.png")); // NOI18N
+        history.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                historyActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 540, -1, -1));
+        jPanel2.add(history, new org.netbeans.lib.awtextra.AbsoluteConstraints(527, 490, 80, 80));
 
-        jToggleButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
-        jToggleButton1.setText("SHOP");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        shop.setBackground(new java.awt.Color(204, 255, 204));
+        shop.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
+        shop.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\shownow2.png")); // NOI18N
+        shop.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                shopActionPerformed(evt);
             }
         });
-        jPanel2.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 540, -1, -1));
+        jPanel2.add(shop, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 490, 100, 80));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 786, 585));
+        firstname.setEnabled(false);
+        firstname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                firstnameActionPerformed(evt);
+            }
+        });
+        jPanel2.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 160, -1));
+
+        jPanel3.setBackground(new java.awt.Color(59, 59, 59));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("D:\\online-store\\src\\pic\\shoping.png")); // NOI18N
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 210, 310));
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 590));
+
+        jPanel4.setBackground(new java.awt.Color(243, 131, 130));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Berlin Sans FB", 0, 36)); // NOI18N
+        jLabel3.setText("PROFILE");
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 140, 46));
+
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 580, 100));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 15)); // NOI18N
+        jLabel2.setText("HISTORY");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 470, 90, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -5, 790, 590));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 796, Short.MAX_VALUE)
+            .addGap(0, 790, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -182,7 +226,7 @@ public class Profiles extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 595, Short.MAX_VALUE)
+            .addGap(0, 585, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -191,26 +235,23 @@ public class Profiles extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_emailActionPerformed
 
-    private void firstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstnameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_firstnameActionPerformed
-
     private void lastnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastnameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_lastnameActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void historyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_historyActionPerformed
         // TODO add your handling code here:
         Historys online = new Historys(username);
         setVisible(false);
         online.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_historyActionPerformed
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         // TODO add your handling code here:
@@ -259,12 +300,23 @@ public class Profiles extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_formComponentShown
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void shopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shopActionPerformed
         // TODO add your handling code here:
         OnlineStore online = new OnlineStore(username);
         setVisible(false);
         online.setVisible(true);
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_shopActionPerformed
+
+    private void firstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_firstnameActionPerformed
+
+    private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
+        Login Info = new Login();
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Info.setVisible(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_logoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,28 +354,33 @@ public class Profiles extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton back;
     private javax.swing.JTextField birthday;
     private javax.swing.JTextField email;
     private javax.swing.JTextField firstname;
     private javax.swing.JTextField gender;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton history;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextField lastname;
     private javax.swing.JTextArea location;
+    private javax.swing.JButton logout;
     private javax.swing.JTextField phone;
+    private javax.swing.JToggleButton shop;
     private javax.swing.JTextField usern;
     // End of variables declaration//GEN-END:variables
 }

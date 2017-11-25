@@ -109,6 +109,11 @@ public class Historys extends javax.swing.JFrame {
 
         back.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
         back.setText("BACK");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
         jPanel3.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 786, 110));
@@ -129,6 +134,7 @@ public class Historys extends javax.swing.JFrame {
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 786, 585));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
@@ -190,6 +196,13 @@ public class Historys extends javax.swing.JFrame {
         orid = Integer.parseInt(ordtId);
         System.out.println(orid);
     }//GEN-LAST:event_HistoryMouseClicked
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        Profiles Info = new Profiles(username);
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Info.setVisible(true);         
+    }//GEN-LAST:event_backActionPerformed
 
     /**
      * @param args the command line arguments

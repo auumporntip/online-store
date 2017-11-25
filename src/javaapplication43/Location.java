@@ -133,6 +133,11 @@ public class Location extends javax.swing.JFrame {
 
         back.setFont(new java.awt.Font("Berlin Sans FB", 0, 18)); // NOI18N
         back.setText("BACK");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
         jPanel3.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, -1, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 790, 480));
@@ -144,6 +149,7 @@ public class Location extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 786, 585));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void EditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditActionPerformed
@@ -160,6 +166,13 @@ public class Location extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_EditActionPerformed
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        ORDER Info = new ORDER(username);
+        this.dispose();
+        Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Info.setVisible(true);         // TODO add your handling code here:
+    }//GEN-LAST:event_backActionPerformed
 
     /**
      * @param args the command line arguments

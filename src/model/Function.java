@@ -158,7 +158,14 @@ public class Function {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, order_detailID);
             pstm.setInt(2, rating);
-            pstm.setString(3, comment);
+            if(comment.equalsIgnoreCase("") || comment.equalsIgnoreCase(null)){
+ 
+                pstm.setString(3, null);
+            }else{
+
+                pstm.setString(3, comment);
+            }
+
             
             int rs = pstm.executeUpdate();
             System.out.println("ADD Review Detail SUCCESS");

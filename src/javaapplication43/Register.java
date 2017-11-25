@@ -190,6 +190,11 @@ public class Register extends javax.swing.JFrame {
 
         yyyy.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         yyyy.setText("YEAR");
+        yyyy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                yyyyActionPerformed(evt);
+            }
+        });
         jPanel1.add(yyyy, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 72, -1));
 
         jLabel11.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
@@ -334,6 +339,7 @@ public class Register extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 786, 590));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void femaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_femaleActionPerformed
@@ -423,11 +429,13 @@ public class Register extends javax.swing.JFrame {
         province.setText("");
         postcode.setText("");
         jLabel18.setText("");
+        yyyy.setText("YEAR");
+        
 
     }//GEN-LAST:event_resetActionPerformed
 
     private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
-        Login log = new Login(username1);
+        Login log = new Login();
               this.dispose(); // ปิดหน้านี้ 
               log.setDefaultCloseOperation(EXIT_ON_CLOSE);
               log.setVisible(true); //หน้า login แสดงออกมา
@@ -484,6 +492,10 @@ public class Register extends javax.swing.JFrame {
                       }
             }
     }//GEN-LAST:event_usernameKeyReleased
+
+    private void yyyyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yyyyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_yyyyActionPerformed
 
     /**
      * @param args the command line arguments

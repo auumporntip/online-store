@@ -46,9 +46,9 @@ public class DetailbyHistory extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        back = new javax.swing.JToggleButton();
         jPanel3 = new javax.swing.JPanel();
-        submit = new javax.swing.JButton();
+        review = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -58,7 +58,7 @@ public class DetailbyHistory extends javax.swing.JFrame {
         totalprice = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         orderid = new javax.swing.JTextField();
-        submit1 = new javax.swing.JButton();
+        shop = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -86,28 +86,28 @@ public class DetailbyHistory extends javax.swing.JFrame {
         jLabel2.setText("ORDER DETIAL");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
-        jToggleButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        jToggleButton1.setText("BACK");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        back.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        back.setText("BACK");
+        back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                backActionPerformed(evt);
             }
         });
-        jPanel2.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 30));
+        jPanel2.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 30));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 90));
 
         jPanel3.setBackground(new java.awt.Color(92, 146, 156));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        submit.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        submit.setText("REVIEW");
-        submit.addActionListener(new java.awt.event.ActionListener() {
+        review.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        review.setText("REVIEW");
+        review.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitActionPerformed(evt);
+                reviewActionPerformed(evt);
             }
         });
-        jPanel3.add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, -1, 30));
+        jPanel3.add(review, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 430, -1, 30));
 
         jLabel4.setFont(new java.awt.Font("Berlin Sans FB", 0, 20)); // NOI18N
         jLabel4.setText("Total Price : ");
@@ -176,30 +176,31 @@ public class DetailbyHistory extends javax.swing.JFrame {
         });
         jPanel3.add(orderid, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 106, -1));
 
-        submit1.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
-        submit1.setText("SHOP");
-        submit1.addActionListener(new java.awt.event.ActionListener() {
+        shop.setFont(new java.awt.Font("Berlin Sans FB", 0, 14)); // NOI18N
+        shop.setText("SHOP");
+        shop.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submit1ActionPerformed(evt);
+                shopActionPerformed(evt);
             }
         });
-        jPanel3.add(submit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, -1, 30));
+        jPanel3.add(shop, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 430, -1, 30));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 790, 490));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        OnlineStore Info = new OnlineStore(username);
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        Historys Info = new Historys(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);            // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_backActionPerformed
 
-    private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
+    private void reviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reviewActionPerformed
         if(checkStatusClick==true)
         {
             Review Info = new Review(username,orid,orderdetail_id);
@@ -210,7 +211,7 @@ public class DetailbyHistory extends javax.swing.JFrame {
             System.out.println("table not click");
         }   
                    // TODO add your handling code here:
-    }//GEN-LAST:event_submitActionPerformed
+    }//GEN-LAST:event_reviewActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:o
@@ -233,13 +234,13 @@ public class DetailbyHistory extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_orderidActionPerformed
 
-    private void submit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submit1ActionPerformed
+    private void shopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shopActionPerformed
         // TODO add your handling code here:
         OnlineStore Info = new OnlineStore(username);
         this.dispose();
         Info.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Info.setVisible(true);  
-    }//GEN-LAST:event_submit1ActionPerformed
+    }//GEN-LAST:event_shopActionPerformed
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         // TODO add your handling code here:
@@ -304,6 +305,7 @@ public class DetailbyHistory extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton back;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -315,11 +317,10 @@ public class DetailbyHistory extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextArea location;
     private javax.swing.JTextField orderid;
-    private javax.swing.JButton submit;
-    private javax.swing.JButton submit1;
+    private javax.swing.JButton review;
+    private javax.swing.JButton shop;
     private javax.swing.JTextField totalprice;
     // End of variables declaration//GEN-END:variables
 }
